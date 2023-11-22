@@ -1,0 +1,33 @@
+/* Query per schermi di dimensioni superiori a 768px (ad esempio PC) */
+@media (min-width: 768px) {
+    .imageDimension {
+        min-width: 300px;
+        /* Imposta la larghezza desiderata */
+        min-height: 300px;
+        /* Imposta l'altezza desiderata */
+        width: 300px;
+        /* Imposta la larghezza desiderata */
+        height: 300px;
+        /* Imposta l'altezza desiderata */
+        object-fit: cover;
+        /* Mantiene le proporzioni dell'immagine e la adatta al contenitore */
+        /* Imposta la larghezza al 100% della larghezza del contenitore genitore */
+    }
+}
+
+/* Query per schermi di dimensioni inferiori a 768px (ad esempio smartphone) */
+@media (max-width: 768px) {
+    .imageDimension {
+        min-width: 350px;
+        /* Imposta la larghezza desiderata */
+        min-height: 350px;
+        /* Imposta l'altezza desiderata */
+        width: 350px;
+        /* Imposta la larghezza desiderata */
+        height: 350px;
+        /* Imposta l'altezza desiderata */
+        object-fit: cover;
+        /* Mantiene le proporzioni dell'immagine e la adatta al contenitore */
+        /* Imposta la larghezza al 50% della larghezza del contenitore genitore */
+    }
+}

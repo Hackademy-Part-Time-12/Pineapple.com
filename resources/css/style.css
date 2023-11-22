@@ -1,0 +1,23 @@
+.bg-green-pineapple {
+    background-color: #495E57;
+}
+
+.text-black-pineapple {
+    color: #1A0000;
+}
+
+.my_navbar {
+    padding: 0;
+}
+
+.first_image {
+    background-image: url('../../public/img/pPhone_Orizontal.png');
+    height: 50vh;
+    background-size: cover;
+}
+
+
+.img_modellation {
+    height: 50vh;
+}
+
