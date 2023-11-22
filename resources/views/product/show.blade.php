@@ -13,11 +13,10 @@
                 <img src="" alt="">
             </div>
             <div class="col-12 com-md-6">
-                <div>Description</div>
-                <div>Price</div>
-                <div>Category</div>
-
-                <div>Inserito da: Nome Utente</div>
+                <div>Description: {{$product->description}}</div>
+                <div>Price: {{$product->price}}</div>
+                <div>Category: {{$product->category->name}}</div>
+                <div>Inserito da: {{$product->user->name ?? 'Utente Sconosciuto'}}</div>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
@@ -16,9 +17,15 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 
+Route::get('/product/show/{product}', [ProductController::class, 'show'])->name('product.show');
+
+Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
+
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
+
+Route::get('/category/show/{category}', [FrontController::class, 'show'])->name('category.show');
 

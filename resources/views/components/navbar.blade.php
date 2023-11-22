@@ -21,7 +21,7 @@
 
         <ul class="desktop-nav">
             <li>
-                <a href="{{route('homepage')}}" class="link-logo"></a>
+                <a href="{{route('welcome')}}" class="link-logo"></a>
             </li>
             <li>
                 <a href="#">pBook</a>
@@ -47,6 +47,10 @@
 
             <li>
                 <a href="{{route('category.index')}}">Categorie</a>
+            </li>
+
+            <li>
+                <a href="{{route('product.index')}}">Annunci</a>
             </li>
 
             <li>

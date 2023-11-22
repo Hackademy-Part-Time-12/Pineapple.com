@@ -10,7 +10,7 @@
                 <div class="imageDimension card mb-3">
                     <img src="{{ $category->cover }}" class="imageDimension img-fluid card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $category->name }}</h5>
+                        <a href="{{route('category.show', compact('category'))}}"><h5 class="card-title">{{ $category->name }}</h5></a>
                     </div>
                 </div>
 

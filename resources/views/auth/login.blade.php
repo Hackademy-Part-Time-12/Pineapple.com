@@ -13,9 +13,9 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{old('email')}}">
                     @error('email')
-                    <div class="fst-italic">
+                    <div class="fst-italic text-danger">
                         {{ $message }}
                     </div>
                     @enderror
@@ -23,9 +23,9 @@
 
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
                     @error('password')
-                    <div class="fst-italic">
+                    <div class="fst-italic text-danger">
                         {{ $message }}
                     </div>
                     @enderror

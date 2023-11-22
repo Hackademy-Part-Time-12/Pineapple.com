@@ -1,0 +1,26 @@
+.image-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.7s;
+}
+
+.card-overlay p {
+    color: white;
+    font-size: 20px;
+}
+
+.image-card:hover .card-overlay {
+    top: 0;
+}

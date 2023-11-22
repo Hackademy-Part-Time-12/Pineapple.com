@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('cover')->default('default/product-auto-img.png');
-            $table->float('price', 5, 2);
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }

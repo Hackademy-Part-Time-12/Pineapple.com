@@ -7,12 +7,22 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $products = Product::paginate(3);
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -36,7 +46,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('product.show', compact('product'));
     }
 
     /**
