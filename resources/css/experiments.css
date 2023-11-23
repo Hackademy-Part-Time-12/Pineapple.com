@@ -1,0 +1,63 @@
+.nonsieteingrado {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    background: #1A0000;
+    color: #f4ce14;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'VT323', monospace;
+}
+
+.dicopiare {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: tastodestroispezionaelemento 25s linear infinite;
+}
+
+.nonsieteingrado .ctrlc {
+    color: #f4ce14;
+    font-size: 13px;
+    font-weight: 700;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+
+.nonlosapetefare {
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 9px;
+}
+
+.nonlosapetefare:after {
+    font-family: "icon";
+    content: "";
+}
+
+@keyframes tastodestroispezionaelemento {
+    from {
+        transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(+200%);
+    }
+}
+
+
+
+
+
+
+
+.mt-4-5 {
+    margin-top: 45px;
+}

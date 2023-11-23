@@ -10,11 +10,20 @@
     padding: 0;
 }
 
-.first_image {
-    background-image: url('../../public/img/pPhone_Orizontal.png');
-    height: 50vh;
+.pPhone_image {
+    background-image: url('../../public/img/pPhone_Orizontal3.png');
+    height: 85vh;
     background-size: cover;
 }
+
+
+
+.pBookSurf_image {
+    background-image: url('../../public/img/pBookSurf_Orizontal.png');
+    height: 85vh;
+    background-size: cover;
+}
+
 
 
 .img_modellation {

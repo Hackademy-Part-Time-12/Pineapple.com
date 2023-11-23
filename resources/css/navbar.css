@@ -16,9 +16,9 @@ body {
 
 .nav-container {
     background: rgb(0, 0, 0, 0.8);
-    height: 44px;
+    height: 50px;
     z-index: 300;
-    position: fixed;
+/*     position: fixed; */
     left: 0;
     top: 0;
     right: 0;
@@ -54,7 +54,7 @@ nav .desktop-nav li a:hover {
     background: url('../../public/img/Senza titolo-5.png');
     display: block;
     background-position: center;
-    height: 44px;
+    height: 50px;
     width: 20px;
     background-repeat: no-repeat;
 }
@@ -64,7 +64,7 @@ nav .desktop-nav li a:hover {
     display: block;
     background-position: center;
     background-size: 18px;
-    height: 44px;
+    height: 50px;
     width: 20px;
     background-repeat: no-repeat;
 }
@@ -74,7 +74,7 @@ nav .desktop-nav li a:hover {
     display: block;
     background-position: center;
     background-size: 17px;
-    height: 44px;
+    height: 50px;
     width: 20px;
     background-repeat: no-repeat;
 }
@@ -84,7 +84,7 @@ nav .desktop-nav li a:hover {
     display: block;
     background-position: center;
     background-size: 17px;
-    height: 44px;
+    height: 50px;
     width: 20px;
     background-repeat: no-repeat;
 }
@@ -133,7 +133,7 @@ nav .desktop-nav li a:hover {
 
 .search-container form input {
     width: 100%;
-    height: 44px;
+    height: 50px;
     border: 0;
     outline: none;
     background: transparent;
@@ -415,7 +415,7 @@ nav .desktop-nav li a:hover {
 
     nav .menu-icon-container {
         width: 20px;
-        height: 44px;
+        height: 50px;
         display: flex;
         align-items: center;
         cursor: pointer;

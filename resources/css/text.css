@@ -1,0 +1,28 @@
+.my-text-end {
+    text-align: end;
+    padding: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .my-text-end {
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+
+
+
+.my-text-start {
+    text-align: start;
+    padding: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .my-text-start {
+        text-align: center;
+        padding: 30px;
+    }
+}

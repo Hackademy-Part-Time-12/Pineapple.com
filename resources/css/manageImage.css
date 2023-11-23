@@ -31,3 +31,19 @@
         /* Imposta la larghezza al 50% della larghezza del contenitore genitore */
     }
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .pPhone_image {
+        background-image: url('../../public/img/pPhone_Vertical4.png');
+        background-size: cover;
+        /* Aggiungi altri stili per il background se necessario */
+    }
+}
