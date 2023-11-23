@@ -10,7 +10,7 @@ class FrontController extends Controller
 {
     public function welcome() {
 
-        $products = Product::take(6)->get()->sortByDesc('created_at');
+        $products = Product::orderBy('created_at', 'desc')->take(6)->get();
 
         return view('welcome', compact('products'));
     }

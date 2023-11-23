@@ -23,27 +23,13 @@
             <li>
                 <a href="{{route('welcome')}}" class="link-logo"></a>
             </li>
+            @foreach ($categories as $category)
+
             <li>
-                <a href="#">pBook</a>
+                <a href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a>
             </li>
-            <li>
-                <a href="#">pPad</a>
-            </li>
-            <li>
-                <a href="#">pPhone</a>
-            </li>
-            <li>
-                <a href="#">pWatch</a>
-            </li>
-            <li>
-                <a href="#">pTv</a>
-            </li>
-            <li>
-                <a href="#">pAir</a>
-            </li>
-            <li>
-                <a href="#">Accessori</a>
-            </li>
+
+            @endforeach
 
             <li>
                 <a href="{{route('category.index')}}">Categorie</a>

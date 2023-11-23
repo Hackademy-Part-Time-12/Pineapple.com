@@ -20,7 +20,7 @@ class ProductCreateForm extends Component
         'title' => 'required|min:3|max:30',
         'description' => 'required|min:3',
         'price' => 'required|numeric|min:1|max:10000',
-        'description' => 'required',
+        'category' => 'required',
     ];
 
     public function cleanForm(){

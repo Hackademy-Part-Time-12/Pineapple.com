@@ -45,7 +45,7 @@
 
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="number" min="1" class="form-control @error('price') is-invalid @enderror" id="price" name="price" wire:model="price">
+                    <input type="number" min="1" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" name="price" wire:model="price">
                     @error('price')
                     <div class="fst-italic text-danger">
                         {{ $message }}
@@ -59,8 +59,13 @@
                     <select wire:model.defer="category" name="category" id="category" class="form-control">
                         <option value="">Scegli la categoria</option>
                         @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
+                        @error('category')
+                        <div class="fst-italic text-danger">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </select>
                 </div>
 
