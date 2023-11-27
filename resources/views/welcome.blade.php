@@ -1,5 +1,10 @@
 <x-layout>
 
+@if (session('access.denied'))
+    <div class="alert alert-danger">
+        {{ session('access.denied')}}
+    </div>
+    @endif
 
     <div class="my-text-end pPhone_image text-black-pineapple">
         <div class="my-position-text">

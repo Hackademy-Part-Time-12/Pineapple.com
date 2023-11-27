@@ -39,14 +39,23 @@
                 <a href="{{route('product.index')}}">Annunci</a>
             </li>
 
-            <li>
-                <a href="#">Supporto</a>
-            </li>
-
             @auth
             <li>
                 <a href="#">Benvenuto {{Auth::user()->name}}</a>
             </li>
+            @if (Auth::user()->is_revisor)
+            <li>
+                <a href="{{route('revisor.index')}}">Revisore 
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\Product::toBeRevisionedCount()}}
+                    <span class="visually-hidden">Unread Message</span>
+
+                </span>
+            </a>
+            </li>
+            @endif
+
+
             <li>
                 <a href="{{route('logout')}}" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                 <form action="{{route('logout')}}" method="POST" id="form-logout">

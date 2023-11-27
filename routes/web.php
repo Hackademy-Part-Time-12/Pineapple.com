@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -20,12 +21,12 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
-
 Route::get('/product/show/{product}', [ProductController::class, 'show'])->name('product.show');
-
 Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
 
 Route::get('/category/index', [CategoryController::class, 'index'])->name('category.index');
-
 Route::get('/category/show/{category}', [FrontController::class, 'show'])->name('category.show');
 
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::patch('/accetta/annuncio/{product}', [RevisorController::class, 'acceptProduct'])->middleware('isRevisor')->name('revisor.accept_product');
+Route::patch('/rifiuta/annuncio/{product}', [RevisorController::class, 'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
