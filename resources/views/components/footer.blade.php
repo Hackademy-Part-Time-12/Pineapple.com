@@ -7,7 +7,7 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="{{route('become.revisor')}}" role="button">Lavora con Noi<i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="{{route('form.revisor')}}" role="button">Lavora con Noi<i class="fab fa-facebook-f"></i></a>
 
       <!-- Twitter -->
       <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
