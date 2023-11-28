@@ -23,6 +23,11 @@ class BecomeRevisor extends Mailable
         $this->user = $user;
     }
 
+    public function build()
+    {
+        return $this->from('pineapple@noreply.com')->view('mail.become_revisor');
+    }
+
     /**
      * Get the message envelope.
      */
