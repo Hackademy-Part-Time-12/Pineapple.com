@@ -33,3 +33,6 @@ Route::patch('/rifiuta/annuncio/{product}', [RevisorController::class, 'rejectPr
 Route::get('/richiesta/revisiore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/rendi/revisiore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/revisor/formRevisor', [RevisorController::class, 'formRevisor'])->middleware('auth')->name('form.revisor');
+
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchProducts'])->name('products.search');
+

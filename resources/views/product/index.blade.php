@@ -38,7 +38,7 @@
         <div class="row">
             <h3 class="col-12 text-center">Tutti gli annunci</h3>
 
-            @foreach ($products as $product)
+            @forelse ($products as $product)
             <div class="col-12 col-md-4 pt-5">
                 <div class="container">
                     <div class="row">
@@ -60,7 +60,16 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+
+            @empty
+
+            <div class="col-12">
+                <div class="alert alert-warning py-3 shadow">
+                    <p class="lead">Non ci sono annunci per quessta ricerca. Prova a cambiare te stesso.</p>
+                </div>
+            </div>
+
+            @endforelse
 
             <div class="container">
                 <div class="row text-center">
