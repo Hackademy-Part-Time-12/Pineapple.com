@@ -23,7 +23,7 @@ class FrontController extends Controller
     public function searchProducts(Request $request)
     {
         $products = Product::search($request->searched)->where('is_accepted', true)->paginate(10);
-        return view('products.index', compact('products'));
+        return view('product.index', compact('products'));
     }
 
 

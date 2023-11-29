@@ -95,9 +95,16 @@
     <div class="search-container hide">
         <div class="link-search"></div>
         <div class="search-bar">
-            <form action="CERCA">
-                <input type="text" placeholder="Ricerca in Pineapple.com">
-            </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="{{route('products.search')}}" method="GET" class="d-flex">
+                        <input type="search" name="searched" class="form-control me-2" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Ciao</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
         <div class="link-close"></div>
 
@@ -152,15 +159,6 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <form action="{{route('products.search')}}" method="GET" class="d-flex">
-                        <input type="search" name="searched" class="form-control me-2" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
     </div>
 
 
