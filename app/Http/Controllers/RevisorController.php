@@ -45,7 +45,6 @@ class RevisorController extends Controller
 
     public function formRevisor() 
     {
-        
-        return view('formRevisor');
+        return view('revisor.formRevisor');
     }
 }

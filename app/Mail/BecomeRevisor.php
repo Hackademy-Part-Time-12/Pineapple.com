@@ -20,7 +20,7 @@ class BecomeRevisor extends Mailable
      */
     public $user;
     public $user_message;
-    public function __construct(User $user, User_message $user_message)
+    public function __construct(User $user, string $user_message)
     {
         $this->user = $user;
         $this->user_message = $user_message;
