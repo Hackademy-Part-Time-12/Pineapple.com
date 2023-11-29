@@ -30,3 +30,6 @@ Route::get('/category/show/{category}', [FrontController::class, 'show'])->name(
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accetta/annuncio/{product}', [RevisorController::class, 'acceptProduct'])->middleware('isRevisor')->name('revisor.accept_product');
 Route::patch('/rifiuta/annuncio/{product}', [RevisorController::class, 'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
+Route::get('/richiesta/revisiore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/rendi/revisiore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+Route::get('/revisor/formRevisor', [RevisorController::class, 'formRevisor'])->middleware('auth')->name('form.revisor');
