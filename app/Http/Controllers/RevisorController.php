@@ -42,4 +42,10 @@ class RevisorController extends Controller
         Artisan::call('pineapple:make-user-revisor', ["email"=>$user->email]);
         return redirect('/')->with('message', 'Complimenti l\'utente è diventato revisore');
     }
+
+    public function formRevisor() 
+    {
+        
+        return view('formRevisor');
+    }
 }

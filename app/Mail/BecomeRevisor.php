@@ -5,6 +5,7 @@ namespace App\Mail;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
@@ -18,14 +19,11 @@ class BecomeRevisor extends Mailable
      * Create a new message instance.
      */
     public $user;
-    public function __construct(User $user)
+    public $user_message;
+    public function __construct(User $user, User_message $user_message)
     {
         $this->user = $user;
-    }
-
-    public function build()
-    {
-        return $this->from('pineapple@noreply.com')->view('mail.become_revisor');
+        $this->user_message = $user_message;
     }
 
     /**
@@ -34,7 +32,7 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Become Revisor',
+            from:new Address('pineapple@noreply.com')
         );
     }
 
@@ -44,7 +42,7 @@ class BecomeRevisor extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.become_revisor',
         );
     }
 
