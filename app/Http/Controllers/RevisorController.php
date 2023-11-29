@@ -31,10 +31,10 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
     }
 
-    public function becomeRevisor() 
+    public function becomeRevisor(Request $request) 
     {
-        Mail::to('admin@pineapple.com')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->back()->with('message', 'Complimenti! Hai richiesto di diventare revisore correttamente');
+        Mail::to('admin@pineapple.com')->send(new BecomeRevisor(Auth::user(), $request->input('user_message')));
+        return redirect()->route('welcome')->with('message', 'Complimenti! Hai richiesto di diventare revisore correttamente');
     }
 
     public function makeRevisor(User $user)
