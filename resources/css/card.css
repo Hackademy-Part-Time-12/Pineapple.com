@@ -1,4 +1,4 @@
-.image-card {
+/* .image-card {
     position: relative;
     overflow: hidden;
 }
@@ -47,8 +47,192 @@
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
-    /* Prefijo necesario para Firefox  */
+} */
+
+
+
+
+
+
+:root {
+    --transition-time: 2.3s;
 }
+
+.my_row {
+    align-items: center;
+    height: 100vh;
+}
+
+.my_card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 10px 0;
+    transition: ease all var(--transition-time);
+    perspective: 1200px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.my_card:hover .my_cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.my_card:hover .my_cover:before {
+    transform: translateZ(30px);
+}
+
+.my_card:hover .my_cover:after {
+    background-color: black;
+}
+
+.my_card:hover .my_cover h1 {
+    transform: translateZ(100px);
+}
+
+.my_card:hover .my_cover .my_price {
+    transform: translateZ(60px);
+}
+
+.my_card:hover .my_cover .my_byUser {
+    transform: translateZ(60px);
+}
+
+.my_card:hover .my_cover .my_publishedIn {
+    transform: translateZ(60px);
+}
+
+.my_card:hover .my_cover a {
+    transform: translateZ(-60px) rotateY(-180deg);
+}
+
+.my_cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.my_cover:before {
+    content: '';
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all var(--transition-time);
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+}
+
+.my_cover:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(0, 0, 0, .4);
+}
+
+.my_cover h1 {
+    font-weight: 600;
+    position: absolute;
+    bottom: 55px;
+    left: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    z-index: 3;
+    font-size: 3em;
+    transform: translateZ(0px);
+}
+
+.my_cover .my_price {
+    font-weight: 200;
+    position: absolute;
+    top: 55px;
+    right: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    z-index: 4;
+    font-size: 2em;
+    transform: translateZ(0px);
+}
+
+.my_cover .my_byUser {
+    font-weight: 200;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    z-index: 4;
+    font-size: 1.2em;
+    transform: translateZ(0px);
+}
+
+
+.my_cover .my_publishedIn {
+    font-weight: 200;
+    position: absolute;
+    top: 130px;
+    right: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    z-index: 4;
+    font-size: 1.2em;
+    transform: translateZ(0px);
+}
+
+.my_card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all var(--transition-time);
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform var(--transition-time), ease background .5s;
+    transform: translateZ(-1px) rotateY(-180deg);
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-weight: 200;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0);
+
+    outline: none;
+    text-decoration: none;
+}
+
+.my_card-back a:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #0b0f08;
+}
+
+
+
+
+
+
 
 
 

@@ -5,15 +5,15 @@
         <div class="row">
 
             @foreach ($categories as $category)
-            <div class="col-12 col-md-6 col-lg-4 pt-5 text-center">
-
-                <div class="imageDimension card mb-3">
-                    <img src="{{ $category->cover }}" class="imageDimension img-fluid card-img-top" alt="{{ $category->name }}">
-                    <div class="card-body">
-                        <a href="{{route('category.show', compact('category'))}}"><h5 class="card-title">{{ $category->name }}</h5></a>
+            <div class="col-12 col-md-6">
+                <div class="my_card">
+                    <div class="my_cover" style="background-image: url('{{ $category->cover }}')">
+                        <h1>{{ $category->name }}</h1>
+                        <div class="my_card-back">
+                        <a class="mx-4" href="{{route('category.show', compact('category'))}}"><button class="bn30">{{ $category->name }}</button></a>
+                        </div>
                     </div>
                 </div>
-
             </div>
             @endforeach
 
