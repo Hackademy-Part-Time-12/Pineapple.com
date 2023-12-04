@@ -79,13 +79,13 @@
                 <a href="#" class="link-search"></a>
             </li>
             <li>
-                <a href="#" class="link-language"></a>
+                <x-_locale lang="it" nation="it" />
             </li>
             <li>
-                <a href="#" class="link-language1"></a>
+                <x-_locale lang="en" nation="gb" />
             </li>
             <li>
-                <a href="#" class="link-language2"></a>
+                <x-_locale lang="es" nation="es" />
             </li>
         </ul>
     </nav>
