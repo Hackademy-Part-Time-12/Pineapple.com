@@ -2,6 +2,7 @@
 
 <form action="{{route('become.revisor')}}" method="POST" class="shadow p-5">
     @csrf
+    @method('GET')
     <div class="mb-3">
       <label for="name" class="form-label">Nome e Cognome</label>
       <input type="text" name="name" class="form-control" id="name">

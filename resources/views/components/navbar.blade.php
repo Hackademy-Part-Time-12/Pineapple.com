@@ -100,7 +100,7 @@
                 <div class="col-12">
                     <form action="{{route('products.search')}}" method="GET" class="d-flex">
                         <input type="search" name="searched" class="form-control me-2" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Ciao</button>
+                        <button class="btn btn-outline-success" type="submit">CERCA</button>
                     </form>
                 </div>
             </div>
