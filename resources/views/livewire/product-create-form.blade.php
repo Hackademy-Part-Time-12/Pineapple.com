@@ -34,13 +34,29 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="cover" class="form-label">Immagine</label>
-                    <input type="file" class="form-control" id="cover" name="cover">
-                    @error('cover')
-                    <div class="fst-italic text-danger">
+                    <input wire:model="temporary_images" type="file" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" name="images">
+                    @error('temporary_images.*')
+                    <p class="text-danger">
                         {{ $message }}
-                    </div>
+                    </p>
                     @enderror
+
+                    @if (!empty($images))
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Photo preview:</p>
+                            <div class="row border border-4 border-info rounded shadow py-4">
+                                @foreach ($images as $key => $image)
+                                <div class="col my-3">
+                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+
                 </div>
 
                 <div class="mb-3">
