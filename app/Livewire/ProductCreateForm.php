@@ -6,22 +6,32 @@ use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class ProductCreateForm extends Component
 {
+    use WithFileUploads;
 
     public $title;
     public $description;
     public $cover;
     public $price;
     public $category;
+    public $images = [];
+    public $temporary_images;
 
     protected $rules = [
         'title' => 'required|min:3|max:30',
         'description' => 'required|min:3',
         'price' => 'required|numeric|min:1|max:10000',
         'category' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
     ];
+
+    public function messages(){
+        return []
+    }
 
     public function cleanForm(){
         $this->title = "";

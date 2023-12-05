@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Image;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -53,4 +54,10 @@ public function toSearchableArray()
     {
         return Product::where('is_accepted', null)->count();
     }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class); 
+    }
+
 }
