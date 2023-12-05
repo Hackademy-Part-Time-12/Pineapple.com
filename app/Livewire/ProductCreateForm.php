@@ -30,7 +30,7 @@ class ProductCreateForm extends Component
     ];
 
     public function messages(){
-        return []
+        return [];
     }
 
     public function cleanForm(){
