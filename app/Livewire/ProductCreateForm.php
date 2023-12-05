@@ -30,8 +30,16 @@ class ProductCreateForm extends Component
     ];
 
     public function messages(){
-        return [];
-    }
+        return [
+            'required'=>'Il campo :attribute è richiesto',
+            'min'=>'Il campo :attribute è troppo corto',
+            'temporary_images.required' => 'L\'immagine è richiesta',
+            'temporary_images.*.image' => 'I file devono essere immagini ',
+            'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di imb',
+            'images.image' => 'L\'immagine dev\'essere un\'immagine ',
+            'images.max' => 'L\'immagine dev\'essere massimo di 1mb',
+        ]
+    };
 
     public function cleanForm(){
         $this->title = "";
