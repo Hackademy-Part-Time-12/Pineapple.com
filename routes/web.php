@@ -36,3 +36,4 @@ Route::get('/revisor/formRevisor', [RevisorController::class, 'formRevisor'])->m
 
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchProducts'])->name('products.search');
 
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('set_language_locale');

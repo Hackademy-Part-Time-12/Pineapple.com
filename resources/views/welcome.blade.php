@@ -51,7 +51,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <h3 class="col-12 text-center">Ultimi annunci</h3>
+            <h3 class="col-12 text-center">{{__('ui.allAnnouncements')}}</h3>
 
             @foreach ($products as $product)
             <div class="col-12 col-md-6">

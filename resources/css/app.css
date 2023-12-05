@@ -1,3 +1,4 @@
+
 @import 'bootstrap';
 
 @import 'style.css';
@@ -17,5 +18,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=VT323&display=swap');
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+@import '../../node_modules/flag-icon-css/css/flag-icons.css';
 
 
