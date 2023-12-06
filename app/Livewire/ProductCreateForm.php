@@ -30,7 +30,7 @@ class ProductCreateForm extends Component
     ];
 
     protected $messages = [
-        'required' => 'Il campo :attribute è richiesto',
+        //'required' => 'Il campo :attribute è richiesto',
         'min' => 'Il campo :attribute è troppo corto',
         'temporary_images.*.required' => 'L\'immagine è richiesta',
         'temporary_images.*.image' => 'I file devono essere immagini',
@@ -45,6 +45,8 @@ class ProductCreateForm extends Component
         $this->description = "";
         $this->price = "";
         $this->category = "";
+        $this->images = [];
+        $this->temporary_images = [];
         //$this->cover = "";
     }
 

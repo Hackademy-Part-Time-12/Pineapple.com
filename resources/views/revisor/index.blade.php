@@ -24,17 +24,16 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{Storage::url($product_to_check->cover)}}" class="d-block w-100" alt="...">
+                    @if ($product_to_check->images)
+                        <div class="carousel-inner">
+                        @foreach ($product_to_check->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt=" ... ">
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{Storage::url($product_to_check->cover)}}" class="d-block w-100" alt="...">
+                        @endforeach
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{Storage::url($product_to_check->cover)}}" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
+                        @else
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -45,6 +44,7 @@
                     </button>
                 </div>
             </div>
+            @endif
             <div class="col-12 col-md-6">
                 <div class="col-12 font-color-dark ">
                     <p><span class="fw-bold">Description</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>

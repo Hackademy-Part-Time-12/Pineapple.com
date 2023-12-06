@@ -6,9 +6,14 @@
 
 
             @forelse ($category->products as $product)
+
+            @php
+                $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : Storage::url($product->images()->first()->path);
+            @endphp
+
             <div class="col-12 col-md-6">
                 <div class="my_card">
-                    <div class="my_cover" style="background-image: url('{{Storage::url($product->cover)}}')">
+                    <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
                         <span class="my_price">{{ $product->price }} €</span>
                             <p class="my_byUser">Inserito da: {{$product->user->name ?? 'Utente Sconosciuto'}}</p>

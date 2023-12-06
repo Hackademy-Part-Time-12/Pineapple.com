@@ -15,16 +15,12 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{Storage::url($product->cover)}}" class="d-block w-100" alt="...">
+                        @foreach ($product->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt=" ... ">
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{Storage::url($product->cover)}}" class="d-block w-100" alt="...">
+                        @endforeach
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{Storage::url($product->cover)}}" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
