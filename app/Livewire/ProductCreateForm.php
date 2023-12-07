@@ -78,7 +78,7 @@ class ProductCreateForm extends Component
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 //$this->product->images()->create(['path' => $image->store('images', 'public')]);
-                $newFileName = "products/($this->product->id)";
+                $newFileName = "products/".$this->product->id;
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 dispatch(new ResizeImage($newImage->path , 400 , 300));
