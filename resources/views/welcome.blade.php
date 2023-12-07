@@ -56,7 +56,7 @@
             @foreach ($products as $product)
 
             @php
-                $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : Storage::url($product->images()->first()->path);
+                $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
             @endphp
 
             <div class="col-12 col-md-6">

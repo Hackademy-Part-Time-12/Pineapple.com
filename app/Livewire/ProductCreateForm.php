@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
@@ -25,8 +26,8 @@ class ProductCreateForm extends Component
         'description' => 'required|min:3',
         'price' => 'required|numeric|min:1|max:10000',
         'category' => 'required',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024'
+        'images.*' => 'image|max:5000',
+        'temporary_images.*' => 'image|max:5000'
     ];
 
     protected $messages = [
@@ -53,7 +54,7 @@ class ProductCreateForm extends Component
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:5000',
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
@@ -76,12 +77,17 @@ class ProductCreateForm extends Component
 
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $this->product->images()->create(['path' => $image->store('images', 'public')]);
+                //$this->product->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "products/($this->product->id)";
+                $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path , 400 , 300));
             }
 
-            session()->flash('productCreated', 'Annuncio inserito con successo');
-            $this->cleanForm();
+            //File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
+        session()->flash('productCreated', 'Annuncio inserito con successo');
+            $this->cleanForm();
     }
 
     public function render()
