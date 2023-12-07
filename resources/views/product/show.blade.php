@@ -1,5 +1,7 @@
 <x-layout>
 
+
+
     <div class="container my-5">
         <div class="row">
             <h2 class="font-color-dark font-titoli">{{$product->title}}</h2>
@@ -17,7 +19,7 @@
                     <div class="carousel-inner">
                         @foreach ($product->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt=" ... ">
+                        <img src="{{($image->getUrl(400,300))}}" class="img-fluid p-3 rounded" alt=" ... ">
                         </div>
                         @endforeach
                         </div>
