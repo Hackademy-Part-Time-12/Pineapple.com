@@ -2,10 +2,11 @@
 
 namespace App\Livewire;
 
-use App\Jobs\ResizeImage;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
@@ -82,6 +83,7 @@ class ProductCreateForm extends Component
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
 
                 dispatch(new ResizeImage($newImage->path , 400 , 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
             }
 
             //File::deleteDirectory(storage_path('/app/livewire-tmp'));
