@@ -25,6 +25,8 @@
 
     {{ $slot }}
 
+    <x-chat />
+
     <x-footer />
 </body>
 

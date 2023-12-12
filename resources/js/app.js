@@ -1,3 +1,3 @@
 import './bootstrap';
 import 'bootstrap';
-import './navbar.js';
+import './ia.js';

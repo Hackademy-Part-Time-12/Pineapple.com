@@ -1,168 +1,127 @@
-<div class="nav-container">
-    <nav>
-        <ul class="mobile-nav">
-            <li>
-                <div class="menu-icon-container">
-                    <div class="menu-icon">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <a href="#" class="link-logo"></a>
-            </li>
-
-            <li>
-                <a href="" class="link-bag"></a>
-            </li>
-        </ul>
-
-        <ul class="desktop-nav">
-            <li>
-                <a href="{{route('welcome')}}" class="link-logo"></a>
-            </li>
-            @foreach ($categories as $category)
-
-            <li>
-                <a href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a>
-            </li>
-
-            @endforeach
-
-            <li>
-                <a href="{{route('category.index')}}">Categorie</a>
-            </li>
-
-            <li>
-                <a href="{{route('product.index')}}">Annunci</a>
-            </li>
-
-            @auth
-            <li>
-                <a href="#">Benvenuto {{Auth::user()->name}}</a>
-            </li>
-            @if (Auth::user()->is_revisor)
-            <li>
-                <a href="{{route('revisor.index')}}">Revisore 
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {{App\Models\Product::toBeRevisionedCount()}}
-                    <span class="visually-hidden">Unread Message</span>
-
-                </span>
-            </a>
-            </li>
-            @endif
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand link-logo" href="{{route('welcome')}}"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('product.index')}}">Annunci</a>
+                </li>
 
 
-            <li>
-                <a href="{{route('logout')}}" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-                <form action="{{route('logout')}}" method="POST" id="form-logout">
-                    @csrf
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                        @foreach ($categories as $category)
+                        <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a></li>
+                        @endforeach
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" aria-current="page" href="{{route('product.create')}}">Inserisci annuncio</a>
+                </li>
+
+                <form action="{{route('products.search')}}" method="GET" class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-            </li>
-            <li>
-                <a href="{{route('product.create')}}">Inserisci annuncio</a>
-            </li>
-
-            @else
-            <li>
-                <a href="{{route('login')}}">Accedi</a>
-            </li>
-            <li>
-                <a href="{{route('register')}}">Registrati</a>
-            </li>
-            @endauth
-
-            <li>
-                <a href="#" class="link-search"></a>
-            </li>
-            <li>
-                <x-_locale lang="it" nation="it" />
-            </li>
-            <li>
-                <x-_locale lang="en" nation="gb" />
-            </li>
-            <li>
-                <x-_locale lang="es" nation="es" />
-            </li>
-        </ul>
-    </nav>
-
-
-
-    <div class="search-container hide">
-        <div class="link-search"></div>
-        <div class="search-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <form action="{{route('products.search')}}" method="GET" class="d-flex">
-                        <input type="search" name="searched" class="form-control me-2" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">CERCA</button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="link-close"></div>
-
-        <div class="quick-links">
-            <h2>Link diretti</h2>
-            <ul>
-                <li>
-                    <a href="#">Inserisci un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Modifica un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Elimina un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Revisiona un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Login</a>
-                </li>
             </ul>
-        </div>
-    </div>
 
 
-    <div class="mobile-search-container">
-        <div class="link-search"></div>
-        <div class="search-bar">
-            <form action="">
-                <input type="text" placeholder="Ricerca in Pineapple.com">
-            </form>
-        </div>
-        <span class="cancel-btn">Cancel</span>
 
-        <div class="quick-links">
-            <h2>Link diretti</h2>
-            <ul>
-                <li>
-                    <a href="#">Inserisci un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Modifica un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Elimina un annuncio</a>
-                </li>
-                <li>
-                    <a href="#">Revisiona un annuncio</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lingua
+                    </a>
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                            <li>
+                                <x-_locale lang="it" nation="it" />
+                            </li>
+                            <li>
+                                <x-_locale lang="en" nation="gb" />
+                            </li>
+                            <li>
+                                <x-_locale lang="es" nation="es" />
+                            </li>
+                        </ul>
+                    </ul>
                 </li>
 
+                @auth
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Benvenuto {{Auth::user()->name}}
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li> <a class="dropdown-item" aria-current="page" href="{{route('logout')}}" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                            <form action="{{route('logout')}}" method="POST" id="form-logout">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
+
+                @if (Auth::user()->is_revisor)
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">Revisore
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Product::toBeRevisionedCount()}}
+                            <span class="visually-hidden">Unread Message</span>
+
+                        </span>
+                    </a>
+                </li>
+                @endif
+
+
+                @else
+                <li class="nav-item dropdown">
+                    <a class="nav-link" aria-current="page" href="{{route('login')}}">Accedi</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" aria-current="page" href="{{route('register')}}">Registrati</a>
+                </li>
+                @endauth
             </ul>
+
         </div>
     </div>
-    </div>
-
-
-</div>
-
-
-<div class="overlay"></div>
+</nav>

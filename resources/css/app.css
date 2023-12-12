@@ -3,8 +3,6 @@
 
 @import 'style.css';
 
-@import 'navbar.css';
-
 @import 'manageImage.css';
 
 @import 'card.css';
@@ -14,6 +12,10 @@
 @import 'experiments.css';
 
 @import 'text.css';
+
+@import 'navbar.css';
+
+@import 'ia.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=VT323&display=swap');
 

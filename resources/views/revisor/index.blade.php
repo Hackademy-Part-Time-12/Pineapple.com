@@ -1,16 +1,16 @@
 <x-layout>
-<div class="container pt-5">
+    <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 pt-5 text-center">
                 <h1>
                     {{$product_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
-             </div>
+            </div>
         </div>
-</div>
+    </div>
 
-@if ($product_to_check)
-<div class="container my-5">
+    @if ($product_to_check)
+    <div class="container my-5">
         <div class="row">
             <h2 class="font-color-dark font-titoli">{{$product_to_check->title}}</h2>
         </div>
@@ -25,14 +25,14 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     @if ($product_to_check->images)
-                        <div class="carousel-inner">
+                    <div class="carousel-inner">
                         @foreach ($product_to_check->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt=" ... ">
+                            <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
                         </div>
                         @endforeach
-                        </div>
-                        @else
+                    </div>
+                    @else
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,8 +52,8 @@
 
                     <h5><span class="fw-bold">Categorie:</span> {{$product_to_check->category->name}}</h4>
 
-                    <p><small class="font-color-dark ">Inserito da: {{$product_to_check ->user->name ?? 'Utente Sconosciuto'}}</small></p>
-                    <p><small class="font-color-dark ">Inserito il:{{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
+                        <p><small class="font-color-dark ">Inserito da: {{$product_to_check ->user->name ?? 'Utente Sconosciuto'}}</small></p>
+                        <p><small class="font-color-dark ">Inserito il:{{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
                 </div>
             </div>
         </div>
@@ -62,18 +62,20 @@
                 <form action="{{route('revisor.accept_product', ['product'=>$product_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                     <button type="submit" class="btn btn-success shadow">Accetta</button>
+                    <button type="submit" class="btn btn-success shadow">Accetta</button>
                 </form>
             </div>
             <div class="col-12 col-md-6 text-end">
                 <form action="{{route('revisor.reject_product', ['product'=>$product_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                     <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
                 </form>
             </div>
         </div>
-        @endif
+    </div>
+
+    @endif
 
 
-        </x-layout>
+</x-layout>
