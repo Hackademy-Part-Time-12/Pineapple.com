@@ -27,11 +27,9 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
     /**
      * Execute the job.
-     * 
-     * @return void
      */
        
-    public function handle()
+    public function handle(): void
     {
         $i = Image::find($this->product_image_id);
         if (!$i) {

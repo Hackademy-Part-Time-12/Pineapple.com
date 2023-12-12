@@ -46,6 +46,16 @@
             </div>
             @endif
             <div class="col-12 col-md-6">
+            <div class="card-body">
+                <h5 class="tc-accent">revisione immagini</h5>
+                    <p>Adulti: <span></span></p>
+                    <p>Satira: <span></span></p>
+                    <p>Medicina: <span></span></p>
+                    <p>Violenza: <span></span></p>
+                    <p>Contenuto Ammiccante: <span></span></p>
+            </div>
+            </div>
+            <div class="col-12">
                 <div class="col-12 font-color-dark ">
                     <p><span class="fw-bold">Description</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>
                     <h5><span class="fw-bold">Prezzo:</span> {{$product_to_check ->price}}€</h5>
@@ -71,6 +81,7 @@
                     @method('PATCH')
                     <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
                 </form>
+
             </div>
         </div>
     </div>
