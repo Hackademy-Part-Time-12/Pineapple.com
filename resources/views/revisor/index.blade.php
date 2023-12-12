@@ -48,11 +48,11 @@
             <div class="col-12 col-md-6">
             <div class="card-body">
                 <h5 class="tc-accent">revisione immagini</h5>
-                    <p>Adulti: <span></span></p>
-                    <p>Satira: <span></span></p>
-                    <p>Medicina: <span></span></p>
-                    <p>Violenza: <span></span></p>
-                    <p>Contenuto Ammiccante: <span></span></p>
+                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
             </div>
             </div>
             <div class="col-12">
