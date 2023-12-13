@@ -1,5 +1,6 @@
 <?php
 return [
-'allAnnouncements'=>'¡Aquí están nuestros anuncios!'
+'allAnnouncements'=>'¡Aquí están nuestros anuncios!',
+'announcements'=>'Anuncios'
 
 ];

@@ -38,12 +38,13 @@ class watermark implements ShouldQueue
             return;
         }
 
-        $srcPath = base_path('resources/img/ricardo.jpg' . $i->path);
+        $srcPath = public_path($i->getUrl(400,300));
         $image = file_get_contents($srcPath);
+        
 
 
         $image = SpatieImage::load($srcPath)
-
+                      ->watermark(base_path('resources/img/ricardo.jpg'))
                       ->watermarkPosition(Manipulations::POSITION_CENTER)
                       ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT) // 10% padding around the watermark
                       ->watermarkOpacity(50);
