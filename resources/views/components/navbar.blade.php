@@ -10,7 +10,7 @@
                     <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('product.index')}}">Annunci</a>
+                    <a class="nav-link" href="{{route('product.index')}}">{{__('ui.announcements')}}</a>
                 </li>
 
 

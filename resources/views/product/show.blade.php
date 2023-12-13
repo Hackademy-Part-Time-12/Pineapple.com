@@ -7,7 +7,7 @@
             <h2 class="font-color-dark font-titoli">{{$product->title}}</h2>
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container my-5 vh-100">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide">
