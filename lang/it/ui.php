@@ -37,6 +37,10 @@ return [
 'itLanguage'=>'Italiano',
 'enLanguage'=>'Inglese',
 'esLanguage'=>'Spagnolo',
-
+'infoP'=>'Punto di riferimento per prodotti pineapple usati, N°1 in Italia.',
+'diventaRevisore'=>'Diventa Revisore',
+'products'=>'Prodotti',
+'usefulLinks'=>'Link utili', 
+'socials'=>'Mettiti in contatto con noi sui social network:',
 
 ];
