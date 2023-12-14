@@ -15,7 +15,7 @@
 </button>
 <div class="chatbot">
     <header>
-        <h2>Chatta con noi</h2>
+        <h2>{{__('ui.chatWithUs')}}</h2>
         <span class="close-btn material-symbols-outlined">close</span>
     </header>
     <ul class="chatbox">

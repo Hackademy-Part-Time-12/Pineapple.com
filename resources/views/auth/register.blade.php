@@ -3,7 +3,7 @@
 
     <div class="container my-5">
         <div class="row">
-            <h3 class="text-center">Registrati</h3>
+            <h3 class="text-center">{{__('ui.register')}}</h3>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome Completo</label>
+                        <label for="name" class="form-label">{{__('ui.fullName')}}</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{old('name')}}">
                         @error('name')
                         <div class="fst-italic text-danger">
@@ -45,11 +45,11 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma Password</label>
+                        <label for="password_confirmation" class="form-label">{{__('ui.confirmPassword')}}</label>
                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="btn btn-primary">{{__('ui.register')}}</button>
                 </form>
             </div>
 
