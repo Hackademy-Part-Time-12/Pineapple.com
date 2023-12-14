@@ -7,7 +7,7 @@
             <h2 class="font-color-dark font-titoli">{{$product->title}}</h2>
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container my-5 vh-100">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide">
@@ -35,13 +35,13 @@
             </div>
             <div class="col-12 col-md-6">
                 <div class="col-12 font-color-dark ">
-                    <p><span class="fw-bold">Description</span> <br><br> {!! nl2br($product->description) !!}</p>
-                    <h5><span class="fw-bold">Prezzo:</span> {{$product->price}}€</h5>
+                    <p><span class="fw-bold">{{__('ui.description')}}</span> <br><br> {!! nl2br($product->description) !!}</p>
+                    <h5><span class="fw-bold">{{__('ui.price')}}</span> {{$product->price}}€</h5>
 
-                    <h5><span class="fw-bold">Categorie:</span> {{$product->category->name}}</h4>
+                    <h5><span class="fw-bold">{{__('ui.categories')}}</span> {{$product->category->name}}</h4>
 
-                    <p><small class="font-color-dark ">Inserito da: {{$product->user->name ?? 'Utente Sconosciuto'}}</small></p>
-                    <p><small class="font-color-dark ">Inserito il:{{$product->created_at->format('d/m/Y')}}</small></p>
+                    <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product->user->name ?? 'Utente Sconosciuto'}}</small></p>
+                    <p><small class="font-color-dark ">{{__('ui.publishedOn')}} {{$product->created_at->format('d/m/Y')}}</small></p>
                 </div>
             </div>
         </div>

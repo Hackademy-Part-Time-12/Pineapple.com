@@ -57,13 +57,13 @@
             </div>
             <div class="col-12">
                 <div class="col-12 font-color-dark ">
-                    <p><span class="fw-bold">Description</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>
-                    <h5><span class="fw-bold">Prezzo:</span> {{$product_to_check ->price}}€</h5>
+                    <p><span class="fw-bold">{{__('ui.description')}}</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>
+                    <h5><span class="fw-bold">{{__('ui.price')}}</span> {{$product_to_check ->price}}€</h5>
 
-                    <h5><span class="fw-bold">Categorie:</span> {{$product_to_check->category->name}}</h4>
+                    <h5><span class="fw-bold">{{__('ui.categories')}}</span> {{$product_to_check->category->name}}</h4>
 
-                        <p><small class="font-color-dark ">Inserito da: {{$product_to_check ->user->name ?? 'Utente Sconosciuto'}}</small></p>
-                        <p><small class="font-color-dark ">Inserito il:{{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
+                        <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product_to_check ->user->name ?? 'Utente Sconosciuto'}}</small></p>
+                        <p><small class="font-color-dark ">{{__('ui.publishedOn')}} {{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
                 </div>
             </div>
         </div>

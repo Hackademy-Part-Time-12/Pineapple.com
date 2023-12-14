@@ -10,7 +10,7 @@
                     <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('product.index')}}">Annunci</a>
+                    <a class="nav-link" href="{{route('product.index')}}">{{__('ui.announcements')}}</a>
                 </li>
 
 
@@ -18,7 +18,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                    {{__('ui.categories')}}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
@@ -29,7 +29,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link" aria-current="page" href="{{route('product.create')}}">Inserisci annuncio</a>
+                    <a class="nav-link" aria-current="page" href="{{route('product.create')}}">{{__('ui.postAnAd')}}</a>
                 </li>
 
                 <form action="{{route('products.search')}}" method="GET" class="d-flex" role="search">
@@ -44,25 +44,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Lingua
+                    {{__('ui.language')}}
                     </a>
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
@@ -83,7 +70,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Benvenuto {{Auth::user()->name}}
+                    {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
@@ -101,7 +88,7 @@
                 @if (Auth::user()->is_revisor)
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">Revisore
+                    <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.auditor')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Product::toBeRevisionedCount()}}
                             <span class="visually-hidden">Unread Message</span>
@@ -114,10 +101,10 @@
 
                 @else
                 <li class="nav-item dropdown">
-                    <a class="nav-link" aria-current="page" href="{{route('login')}}">Accedi</a>
+                    <a class="nav-link" aria-current="page" href="{{route('login')}}">{{__('ui.login')}}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" aria-current="page" href="{{route('register')}}">Registrati</a>
+                    <a class="nav-link" aria-current="page" href="{{route('register')}}">{{__('ui.register')}}</a>
                 </li>
                 @endauth
             </ul>
