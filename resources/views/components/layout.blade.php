@@ -28,8 +28,10 @@
     {{ $slot }}
 
     <x-chat />
-
+        
     <x-footer />
+
+    <x-feedback />
 </body>
 
 </html>
