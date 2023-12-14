@@ -19,8 +19,8 @@
     <div class="my-text-end pPhone_image text-black-pineapple">
         <div class="my-position-text">
             <h1 class="">pPhone 15 Pro</h1>
-            <h3>Titanio. Forte. Leggero. Pro.</h3>
-            <a class="" href=""><button class="bn30">Acquista</button></a>
+            <h3>{{__('ui.titanium.Strong.Lightweight.Pro.')}}</h3>
+            <a class="" href=""><button class="bn30">{{__('ui.buy')}}</button></a>
         </div>
     </div>
 
@@ -30,8 +30,8 @@
     <div class="my-text-start pBookSurf_image text-black-pineapple">
         <div class="my-position-text text-white">
             <h1 class="">pBook Surf</h1>
-            <h3>Sottile. Leggero. Prestante. Versatile.</h3>
-            <a class="" href=""><button class="bn30">Acquista</button></a>
+            <h3>{{__('ui.slim.Lightweight.Strong.Versatile.')}}</h3>
+            <a class="" href=""><button class="bn30">{{__('ui.buy')}}</button></a>
         </div>
     </div>
 

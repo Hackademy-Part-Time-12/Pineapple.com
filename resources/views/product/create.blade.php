@@ -3,7 +3,7 @@
 
     <div class="container my-5">
         <div class="row">
-            <h3 class="text-center">Aggiungi Annuncio</h3>
+            <h3 class="text-center">{{__('ui.addAnAd')}}</h3>
         </div>
     </div>
 

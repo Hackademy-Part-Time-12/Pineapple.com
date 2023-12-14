@@ -14,7 +14,7 @@
                 @endif
 
                 <div class="mb-3">
-                    <label for="title" class="form-label">Titolo Annuncio</label>
+                    <label for="title" class="form-label">{{__('ui.adTitle')}}</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" wire:model="title">
                     @error('title')
                     <div class="fst-italic text-danger">
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="description" class="form-label">Descrizione</label>
+                    <label for="description" class="form-label">{{__('ui.description')}}</label>
                     <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" cols="30" rows="5" wire:model="description"></textarea>
                     @error('description')
                     <div class="fst-italic text-danger">
@@ -49,7 +49,7 @@
                                 @foreach ($images as $key => $image)
                                 <div class="col my-3">
                                     <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                                 </div>
                                 @endforeach
                             </div>
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="price" class="form-label">Prezzo</label>
+                    <label for="price" class="form-label">{{__('ui.price')}}</label>
                     <input type="number" min="1" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" name="price" wire:model="price">
                     @error('price')
                     <div class="fst-italic text-danger">
@@ -71,7 +71,7 @@
 
 
                 <div class="mb-3">
-                    <label for="category">Categoria</label>
+                    <label for="category">{{__('ui.category')}}</label>
                     <select wire:model.defer="category" name="category" id="category" class="form-control">
                         <option value="">Scegli la categoria</option>
                         @foreach ($categories as $category)
@@ -85,7 +85,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Aggiungi annuncio</button>
+                <button type="submit" class="btn btn-primary">{{__('ui.addAnAd')}}</button>
             </form>
         </div>
     </div>

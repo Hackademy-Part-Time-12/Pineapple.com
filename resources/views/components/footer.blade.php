@@ -78,10 +78,10 @@
                         <a href="{{route('form.revisor')}}" class="text-reset">Diventa Revisore</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Accedi</a>
+                        <a href="#!" class="text-reset">{{__('ui.login')}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Registrati</a>
+                        <a href="#!" class="text-reset">{{__('ui.register')}}</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -89,7 +89,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
+                    <h6 class="text-uppercase fw-bold mb-4">{{__('ui.contact')}}</h6>
                     <p><i class="fas fa-home me-3"></i> Roma, 00100 IT</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>

@@ -2,7 +2,7 @@
 
     <div class="container my-5">
         <div class="row">
-            <h3 class="text-center">Accedi</h3>
+            <h3 class="text-center">{{__('ui.login')}}</h3>
         </div>
     </div>
 
@@ -34,10 +34,10 @@
 
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                        <label class="form-check-label" for="remember">Ricordami</label>
+                        <label class="form-check-label" for="remember">{{__('ui.rememberMe')}}</label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn btn-primary">{{__('ui.login')}}</button>
                 </form>
             </div>
 
