@@ -3,7 +3,7 @@ return [
 'allAnnouncements'=>'Here are our ads!',
 'announcements'=>'Announcements',
 'postedBy'=>'posted by:',
-'publishedOn'=>'Published On:',,
+'publishedOn'=>'Published On:',
 'categories'=>'Categories',
 'accessories'=>'Accessories',
 'postAnAd'=>'Post an Ad',
@@ -36,6 +36,9 @@ return [
 'titanium.Strong.Lightweight.Pro.'=>'Titanium. Strong. Lightweight. Pro.',
 'slim.Lightweight.Strong.Versatile.'=>'Slim. Lightweight. Strong. Versatile.',
 'buy'=>'Buy',
+'itLanguage'=>'Italian',
+'enLanguage'=>'English',
+'esLanguage'=>'Spanish',
 
 
 ];

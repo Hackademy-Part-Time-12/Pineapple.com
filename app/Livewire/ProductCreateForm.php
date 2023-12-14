@@ -25,6 +25,7 @@ class ProductCreateForm extends Component
     public $category;
     public $images = [];
     public $temporary_images;
+    public $user_id;
 
     protected $rules = [
         'title' => 'required|min:3|max:30',
@@ -32,7 +33,8 @@ class ProductCreateForm extends Component
         'price' => 'required|numeric|min:1|max:10000',
         'category' => 'required',
         'images.*' => 'image|max:5000',
-        'temporary_images.*' => 'image|max:5000'
+        'temporary_images.*' => 'image|max:5000',
+        'user_id' => 'required',
     ];
 
     protected $messages = [
@@ -76,6 +78,9 @@ class ProductCreateForm extends Component
 
     public function store()
     {
+
+        $this->user_id = Auth::user()->id;
+
         $this->validate();
 
         $this->product = Category::find($this->category)->products()->create($this->validate());

@@ -20,13 +20,14 @@ return new class extends Migration
         });
 
         $categories = [
-            ['name' => 'pBook', 'cover' => '/storage/default/pBookCategory.png'],
-            ['name' => 'pTab', 'cover' => '/storage/default/product-auto-img.png'],
-            ['name' => 'pPhone', 'cover' => '/storage/default/pPhoneCategory.png'],
-            ['name' => 'pWatch', 'cover' => '/storage/default/pWatchCategory.png'],
-            ['name' => 'pTV', 'cover' => '/storage/default/product-auto-img.png'],
-            ['name' => 'pAir', 'cover' => '/storage/default/product-auto-img.png'],
-            ['name' => 'Accessori', 'cover' => '/storage/default/product-auto-img.png'],
+            ['name' => 'pBook', 'cover' => '/storage/default/pBookCategory.jpg'],
+            ['name' => 'pBookPro', 'cover' => '/storage/default/pBookProCategory.jpg'],
+            ['name' => 'pTab', 'cover' => '/storage/default/pTabCategory.jpg'],
+            ['name' => 'pPhone', 'cover' => '/storage/default/pPhoneCategory.jpg'],
+            ['name' => 'pWatch', 'cover' => '/storage/default/pWatchCategory.jpg'],
+            ['name' => 'pTV', 'cover' => '/storage/default/pTVCategory.png'],
+            ['name' => 'pAir', 'cover' => '/storage/default/pAirCategory.jpg'],
+            ['name' => 'Accessori', 'cover' => '/storage/default/accessoriCategory.jpg'],
             // Aggiungi altre categorie qui...
         ];
 

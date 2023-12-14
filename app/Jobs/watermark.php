@@ -38,7 +38,7 @@ class watermark implements ShouldQueue
             return;
         }
 
-        $srcPath = public_path($i->getUrl(400,300));
+        $srcPath = base_path("public" . $i->getUrl(400,300));
         $image = file_get_contents($srcPath);
         
 

@@ -34,7 +34,9 @@ return [
 'titanium.Strong.Lightweight.Pro.'=>'Titanio. Forte. Leggero. Pro.',
 'slim.Lightweight.Strong.Versatile.'=>'Sottile. Leggero. Prestante. Versatile.',
 'buy'=>'Acquista',
-
+'itLanguage'=>'Italiano',
+'enLanguage'=>'Inglese',
+'esLanguage'=>'Spagnolo',
 
 
 ];

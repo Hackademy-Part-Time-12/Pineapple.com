@@ -13,7 +13,7 @@ class Product extends Model
     use HasFactory, Searchable;
 
     protected $fillable = [
-        'title', 'description', 'cover', 'price',
+        'title', 'description', 'cover', 'price', 'user_id',
     ];
 
 

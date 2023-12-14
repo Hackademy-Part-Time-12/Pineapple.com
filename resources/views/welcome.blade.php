@@ -16,7 +16,7 @@
     @endif
 
 
-    <div class="my-text-end pPhone_image text-black-pineapple">
+    <!--     <div class="my-text-end pPhone_image text-black-pineapple">
         <div class="my-position-text">
             <h1 class="">pPhone 15 Pro</h1>
             <h3>{{__('ui.titanium.Strong.Lightweight.Pro.')}}</h3>
@@ -33,7 +33,37 @@
             <h3>{{__('ui.slim.Lightweight.Strong.Versatile.')}}</h3>
             <a class="" href=""><button class="bn30">{{__('ui.buy')}}</button></a>
         </div>
+    </div> -->
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-md-3 col-sm-6">
+                <img src="../../../public/img/pAirCategory.jpg" alt="">
+                <P></P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img src="" alt="">
+                <P></P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img src="" alt="">
+                <P></P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img src="" alt="">
+                <P></P>
+            </div>
+        </div>
     </div>
+
+
+
 
     <!--     <div class="pBook_image text-end text-black-pineapple">
         <div class="p-5">
@@ -56,7 +86,7 @@
             @foreach ($products as $product)
 
             @php
-                $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
+            $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
             @endphp
 
             <div class="col-12 col-md-6">
@@ -64,11 +94,11 @@
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
                         <span class="my_price">{{ $product->price }} €</span>
-                            <p class="my_byUser">{{__('ui.postedBy')}} {{$product->user->name ?? 'Utente Sconosciuto'}}</p>
-                            <p class="my_publishedIn">{{__('ui.publishedOn')}} {{$product->created_at->format('d/m/Y')}}</p>
+                        <p class="my_byUser">{{__('ui.postedBy')}} {{$product->user->name ?? 'Utente Sconosciuto'}}</p>
+                        <p class="my_publishedIn">{{__('ui.publishedOn')}} {{$product->created_at->format('d/m/Y')}}</p>
                         <div class="my_card-back">
-                        <a class="mx-4" href="{{route('product.show', compact('product'))}}"><button class="bn30">Visualizza</button></a>
-                        <a class="mx-4" href="{{route('category.show', ['category'=>$product->category])}}"><button class="bn30">{{$product->category->name}}</button></a>
+                            <a class="mx-4" href="{{route('product.show', compact('product'))}}"><button class="bn30">Visualizza</button></a>
+                            <a class="mx-4" href="{{route('category.show', ['category'=>$product->category])}}"><button class="bn30">{{$product->category->name}}</button></a>
                         </div>
                     </div>
                 </div>

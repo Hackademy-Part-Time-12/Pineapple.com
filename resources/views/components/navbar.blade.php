@@ -18,7 +18,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.categories')}}
+                        {{__('ui.categories')}}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
@@ -49,18 +49,45 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.language')}}
+                        {{__('ui.language')}}
                     </a>
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
                             <li>
-                                <x-_locale lang="it" nation="it" />
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <x-_locale lang="it" nation="it" />
+                                        </div>
+                                        <div class="col-6 pt-2 px-0">
+                                            <p>{{__('ui.itLanguage')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <x-_locale lang="en" nation="gb" />
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <x-_locale lang="en" nation="gb" />
+                                        </div>
+                                        <div class="col-6 pt-2 px-0">
+                                            <p>{{__('ui.enLanguage')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <x-_locale lang="es" nation="es" />
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <x-_locale lang="es" nation="es" />
+                                        </div>
+                                        <div class="col-6 pt-2 px-0">
+                                            <p>{{__('ui.esLanguage')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </ul>
@@ -70,7 +97,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{__('ui.welcome')}} {{Auth::user()->name}}
+                        {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
