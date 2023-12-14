@@ -30,6 +30,11 @@
                         <div class="carousel-item @if($loop->first)active @endif">
                             <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
                         </div>
+                        <div>
+                            @foreach ($image->labels as $label)
+                            {{$label}}
+                            @endforeach
+                        </div>
                         @endforeach
                     </div>
                     @else

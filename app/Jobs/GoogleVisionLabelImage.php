@@ -11,7 +11,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
-class GoogleVisionLableImage implements ShouldQueue
+class GoogleVisionLabelImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -53,13 +53,6 @@ class GoogleVisionLableImage implements ShouldQueue
         }
 
         $imageAnnotator->close();
-
-
-
-
-
-
-
 
     }
 }

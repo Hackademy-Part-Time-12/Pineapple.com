@@ -41,24 +41,44 @@
 
         <div class="row">
             <div class="col-12 col-md-3 col-sm-6">
-                <img src="../../../public/img/pAirCategory.jpg" alt="">
-                <P></P>
+                <img class="img-fluid pt-5" src="{{ asset('img/pPhoneCategory.jpg') }}" alt="">
+                <P class="text-center">pPhone</P>
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-                <img src="" alt="">
-                <P></P>
+            <img class="img-fluid pt-5" src="{{ asset('img/pBookCategory.jpg') }}" alt="">
+                <P class="text-center">pBook</P>
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-                <img src="" alt="">
-                <P></P>
+            <img class="img-fluid pt-5" src="{{ asset('img/pBookProCategory.jpg') }}" alt="">
+                <P class="text-center">pBookPro</P>
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-                <img src="" alt="">
-                <P></P>
+            <img class="img-fluid pt-5" src="{{ asset('img/pWatchCategory.jpg') }}" alt="">
+                <P class="text-center">pWatch</P>
             </div>
+            <div class="col-12 col-md-3 col-sm-6">
+                <img class="img-fluid pt-5" src="{{ asset('img/pAirCategory.jpg') }}" alt="">
+                <P class="text-center">pAir</P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img class="img-fluid pt-5" src="{{ asset('img/pTabCategory.jpg') }}" alt="">
+                <P class="text-center">pTab</P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img class="img-fluid pt-5" src="{{ asset('img/pTVCategory.png') }}" alt="">
+                <P class="text-center">pTV</P>
+            </div>
+
+            <div class="col-12 col-md-3 col-sm-6">
+                <img class="img-fluid pt-5" src="{{ asset('img/accessoriCategory.jpg') }}" alt="">
+                <P class="text-center">Accessori</P>
+            </div>
+
         </div>
     </div>
 
