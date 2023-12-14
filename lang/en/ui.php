@@ -39,5 +39,10 @@ return [
 'itLanguage'=>'Italian',
 'enLanguage'=>'English',
 'esLanguage'=>'Spanish',
+'infoP'=>'Benchmark for used pineapple products, N has 1 in Italy.',
+'diventaRevisore'=>'Conviértete en revisor',
+'products'=>'Products',
+'usefulLinks'=>'Useful links',
+'socials'=>'Get connected with us on social networks:',
 
 ];
