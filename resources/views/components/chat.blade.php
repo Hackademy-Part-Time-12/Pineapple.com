@@ -16,16 +16,16 @@
 <div class="chatbot">
     <header>
         <h2>{{__('ui.chatWithUs')}}</h2>
-        <span class="close-btn material-symbols-outlined">close</span>
+        <span class="close-btn material-symbols-outlined">{{__('ui.IAcloseMessage')}}</span>
     </header>
     <ul class="chatbox">
         <li class="chat incoming">
             <span class="material-symbols-outlined"></span>
-            <p>Hi there 👋<br>How can I help you today?</p>
+            <p>{{__('ui.IAchat1')}} 👋<br>{{__('ui.IAchat2')}}</p>
         </li>
     </ul>
     <div class="chat-input">
-        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
+        <textarea placeholder="{{__('ui.IAenterMessage')}}" spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">{{__('ui.IAsendMessage')}}</span>
     </div>
 </div>

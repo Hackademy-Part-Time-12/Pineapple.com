@@ -42,5 +42,13 @@ return [
 'products'=>'Prodotti',
 'usefulLinks'=>'Link utili', 
 'socials'=>'Mettiti in contatto con noi sui social network:',
+'IAchat1'=>'Ciao',
+'IAchat2'=>'Come posso aiutarti oggi?',
+'IAenterMessage'=>'Scrivi un messaggio...',
+'IAsendMessage'=>'invia',
+'IAcloseMessage'=>'chiudi',
+'search'=>'Cerca',
+'fraseInMovimento'=>'A partire dal 24 novembre, acquista un prodotto in promozione e avrai una Pineapple Gift Card fino a € 200.',
+
 
 ];

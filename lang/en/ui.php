@@ -44,5 +44,12 @@ return [
 'products'=>'Products',
 'usefulLinks'=>'Useful links',
 'socials'=>'Get connected with us on social networks:',
+'IAchat1'=>'Hi there',
+'IAchat2'=>'How can I help you today?',
+'IAenterMessage'=>'Enter a message...',
+'IAsendMessage'=>'send',
+'IAcloseMessage'=>'close',
+'search'=>'Search',
+'fraseInMovimento'=>'As of November 24, buy a promotional product and you\'ll get a Pineapple Gift Card for up to €200.',
 
 ];

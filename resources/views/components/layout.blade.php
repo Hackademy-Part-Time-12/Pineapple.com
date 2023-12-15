@@ -19,7 +19,7 @@
     <div class="nonsieteingrado">
         <div class="dicopiare">
             <div class="ctrlc">
-                <span class="ctrlv">A partire dal 24 novembre, acquista un prodotto in promozione e avrai una Pineapple Gift Card fino a € 200.</span>
+                <span class="ctrlv">{{__('ui.fraseInMovimento')}}</span>
                 <span class="nonlosapetefare"></span>
             </div>
         </div>
