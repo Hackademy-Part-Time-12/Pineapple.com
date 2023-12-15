@@ -17,7 +17,7 @@
 
 @import 'ia.css';
 
-@import 'fb.css';
+@import 'feedback.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=VT323&display=swap');
 
@@ -25,4 +25,9 @@
 
 @import '../../node_modules/flag-icon-css/css/flag-icons.css';
 
+/* @import 'rombi.css'; */
+
+@import 'carouselCategory.css';
+
+@import 'orizzontalCard.css';
 

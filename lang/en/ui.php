@@ -1,12 +1,12 @@
 <?php
 return [
-'allAnnouncements'=>'Here are our ads!',
+'allAnnouncements'=>'Latest Ads',
 'announcements'=>'Announcements',
 'postedBy'=>'posted by:',
 'publishedOn'=>'Published On:',
 'categories'=>'Categories',
 'accessories'=>'Accessories',
-'postAnAd'=>'Post an Ad',
+'postAnAd'=>'Post ',
 'language'=>'Language',
 'login'=>'Login',
 'register'=>'Register',
@@ -55,6 +55,16 @@ return [
 'visualizzaProdotto'=>'View product',
 'tornaListaAnnunci'=>'Back to the list Ads',
 'scegliCategoria'=>'Select the category',
-
-
+'goToUsedSection'=>'Go to the Second-hand section',
+'nuoviProdottiPineapple'=>'New Pineapple Products',
+'presentazionePPhone'=>'Welcome to the revolutionary experience of the pPhone 13, the latest technological masterpiece launched in 2023. With its sleek and futuristic design, the pPhone 13 stands out for its incredible 6.7-inch OLED display that offers unprecedented visual quality. Equipped with the powerful A15 processor, it ensures extraordinary performance and unmatched data processing speed. Moreover, its innovative 48 MP camera with AI technology delivers exceptional image quality, making it the ideal companion to capture your most precious moments.',
+'presentazionePBook'=>'Discover the pBook Ultra, the pinnacle of technological innovation in 2023, a device that redefines the boundaries of productivity and creativity. With its 15-inch Retina 4K display, the pBook Ultra offers stunning visual quality and vivid colors for an immersive viewing experience. Powered by a next-generation advanced processor, it ensures exceptional performance and smooth, fast multitasking. Plus, its long-lasting battery and lightweight yet durable design make it the ideal companion for professionals and creatives on the go.',
+'presentazionePTab'=>'Introducing the pTab SlimXL, the revolution in the tablet world launched in 2023. This device stands out with its ultra-slim and lightweight design, combined with a high-resolution 12-inch screen, offering an exceptional visual experience. The pTab SlimXL is equipped with a powerful octa-core processor and high-capacity RAM, ensuring fast and smooth performance. Moreover, its long-lasting battery and advanced connectivity features make it ideal for both entertainment and work on the go.',
+'presentazionePWatch'=>'Discover the pWatch Series 3, the latest innovation in the world of smartwatches, launched in 2023. This smartwatch stands out with its elegant design and ultra-durable case, perfect for any lifestyle. Equipped with advanced health and fitness monitoring, the pWatch Series 3 is your ideal companion for tracking your daily activity and health. With an all-day battery life and a range of smart features, the pWatch Series 3 keeps you connected, active, and informed at all times.',
+'recensioni'=>'Reviews',
+'recensioneLinda'=>'Since I purchased the pPhone 13, I have been extremely impressed. The quality of the 6.7-inch OLED screen is astounding, making videos and photos incredibly vivid. The speed and efficiency of the A15 processor have significantly improved my user experience, making multitasking smooth and seamless. The 48 MP camera is exceptional, capturing sharp images with extraordinary details, perfect for photography enthusiasts. Additionally, the battery life is remarkable, allowing me to use it all day without worries.',
+'recensionePablo'=>'Since I started using the pBook Ultra, my productivity has increased exponentially. The 15-inch Retina 4K display offers exceptional visual quality, perfect for my graphic design and video editing work. The speed of the next-generation processor makes every operation incredibly fast, effortlessly handling even the most demanding software. The long-lasting battery and lightweight design have been a game-changer, allowing me to work anywhere without worries. It\'s definitely the best laptop I\'ve ever owned.',
+'recensioneArnold'=>'I recently purchased the pTab SlimXL, and I am completely satisfied. The ultra-slim and lightweight design makes it incredibly convenient to carry anywhere, without compromising the 12-inch screen size. The resolution is fantastic, offering clear and vivid images for both work and entertainment. The performance of the octa-core processor is impressive, handling all the applications I use without any slowdown. Battery life is another strong point, allowing me to use it for entire days without recharging.',
+'recensioneGuohua'=>'Since I purchased the pWatch Series 3, my daily routine has improved significantly. The sleek design and durable case make it suitable for every occasion, whether at the gym or in the office. I\'ve been particularly impressed by the health and fitness monitoring features, which help me track my progress and stay motivated. The battery lasts a full day, even with intensive use, and smart notifications keep me connected without having to pull out my phone. It\'s a functional and stylish smartwatch, perfect for my active lifestyle.',
+'tagUtenti'=>'User',
 ];

@@ -23,4 +23,15 @@
 </div>
 
 <button id="popup" class="feedback-button" onclick="toggle_visibility()">Feedback</button>
-<script src="_include/js/feedback.js"></script>
+
+
+
+<script>
+  function toggle_visibility() {
+    var e = document.getElementById('feedback-main');
+    if (e.style.display == 'block')
+      e.style.display = 'none';
+    else
+      e.style.display = 'block';
+  }
+</script>

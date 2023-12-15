@@ -1,8 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-html {
-  background: #2F3238;
-}
-
 .feedback-button {
   height: 40px;
   border: solid 3px #CCCCCC;
@@ -31,7 +26,7 @@ html {
 }
 
 #feedback-div {
-  background-color: rgba(72, 72, 72, 0.4);
+  background-color: rgba(72, 72, 72, 0.5);
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 35px;
@@ -39,6 +34,7 @@ html {
   width: 450px;
   float: left;
   left: 50%;
+  top: 50%;
   position: absolute;
   margin-top: 30px;
   margin-left: -260px;
@@ -48,7 +44,6 @@ html {
 
 .feedback-input {
   color: #3c3c3c;
-  font-family: "Roboto", helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   border-radius: 0;

@@ -2,7 +2,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <h1 class="col-12 text-center">{{__('ui.title')}}</h1>
+            <!-- <h1 class="col-12 text-center">{{__('ui.title')}}</h1> -->
 
 
             @forelse ($category->products as $product)
@@ -29,7 +29,7 @@
 
             @empty
 
-            <div class="col-12">
+            <div class="col-12 text-center mt-5">
             <p class="h1">{{__('ui.thereAreNoAdsForThisCategory')}}</p>
             <p class="h2">{{__('ui.postAnAd')}}<a href="{{route('product.create')}}">{{__('ui.newAd')}}</a></p>
             </div>

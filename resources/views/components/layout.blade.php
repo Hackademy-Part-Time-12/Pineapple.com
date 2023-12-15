@@ -25,13 +25,20 @@
         </div>
     </div>
 
-    {{ $slot }}
+    <div class="min-vh-100">
+        {{ $slot }}
+    </div>
 
-    <x-chat />
-        
-    <x-footer />
 
     <x-feedback />
+
+    <x-chat />
+
+    <x-footer />
+
+
+
+
 </body>
 
 </html>

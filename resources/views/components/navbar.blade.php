@@ -33,7 +33,7 @@
                 </li>
 
                 <form action="{{route('products.search')}}" method="GET" class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
+                    <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">{{__('ui.search')}}</button>
                 </form>
             </ul>

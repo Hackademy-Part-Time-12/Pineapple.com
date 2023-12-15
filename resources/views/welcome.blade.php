@@ -1,5 +1,7 @@
 <x-layout>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
 
 
 
@@ -37,7 +39,142 @@
 
 
 
-    <div class="container">
+
+
+
+    <!--     <div class="container rombi_body">
+        <div class="gallery">
+            <img src="{{ asset('img/pPhoneCategory.jpg') }}" alt="a house on a mountain">
+            <img src="{{ asset('img/pBookCategory.jpg') }}" alt="sime pink flowers">
+            <img src="{{ asset('img/pBookProCategory.jpg') }}" alt="big rocks with some trees">
+            <img src="{{ asset('img/pWatchCategory.jpg') }}" alt="a waterfall, a lot of tree and a great view from the sky">
+            <img src="{{ asset('img/pAirCategory.jpg') }}" alt="a cool landscape">
+            <img src="{{ asset('img/pTabCategory.jpg') }}" alt="inside a town between two big buildings">
+            <img src="{{ asset('img/pTVCategory.png') }}" alt="a great view of the sea above the mountain">
+            <img src="{{ asset('img/accessoriCategory.jpg') }}" alt="a great view of the sea above the mountain">
+        </div>
+    </div> -->
+
+
+
+
+    <div class="container-fluid">
+        <header class="c-header c-header--archive c-header--project-list">
+            <div class="c-mouse-vertical-carousel js-carousel u-media-wrapper u-media-wrapper--16-9">
+                <ul class="c-mouse-vertical-carousel__list js-carousel-list">
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="0">
+                        <a href="{{route('category.show', ['category'=>$categories[0]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    01
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-Phone
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="1">
+                        <a href="{{route('category.show', ['category'=>$categories[1]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    02
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-Book
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="2">
+                        <a href="{{route('category.show', ['category'=>$categories[2]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    03
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-Tab
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="3">
+                        <a href="{{route('category.show', ['category'=>$categories[3]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    04
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-Watch
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="4">
+                        <a href="{{route('category.show', ['category'=>$categories[4]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    05
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-TV
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="5">
+                        <a href="{{route('category.show', ['category'=>$categories[5]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    06
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                p-Air
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="6">
+                        <a href="{{route('category.show', ['category'=>$categories[6]])}}">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    07
+                                </span> Categoria
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                Accessori
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pPhone_Orizontal3.png')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pBookSurf_orizontal.png')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pWatchCategory.jpg')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pWatchCategory.jpg')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pTVCategory.png')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pAirCategory.jpg')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/accessoriCategory.jpg')"></div>
+                <div class="c-gradient-overlay"></div>
+            </div>
+        </header>
+    </div>
+
+
+    <!--     <div class="container">
 
         <div class="row">
             <div class="col-12 col-md-3 col-sm-6">
@@ -46,17 +183,17 @@
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-            <img class="img-fluid pt-5" src="{{ asset('img/pBookCategory.jpg') }}" alt="">
+                <img class="img-fluid pt-5" src="{{ asset('img/pBookCategory.jpg') }}" alt="">
                 <P class="text-center">pBook</P>
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-            <img class="img-fluid pt-5" src="{{ asset('img/pBookProCategory.jpg') }}" alt="">
+                <img class="img-fluid pt-5" src="{{ asset('img/pBookProCategory.jpg') }}" alt="">
                 <P class="text-center">pBookPro</P>
             </div>
 
             <div class="col-12 col-md-3 col-sm-6">
-            <img class="img-fluid pt-5" src="{{ asset('img/pWatchCategory.jpg') }}" alt="">
+                <img class="img-fluid pt-5" src="{{ asset('img/pWatchCategory.jpg') }}" alt="">
                 <P class="text-center">pWatch</P>
             </div>
             <div class="col-12 col-md-3 col-sm-6">
@@ -80,7 +217,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -100,7 +237,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <h3 class="col-12 text-center">{{__('ui.allAnnouncements')}}</h3>
+            <h2 class="col-12 text-center my-5">{{__('ui.allAnnouncements')}}</h2>
 
             @foreach ($products as $product)
 
@@ -151,6 +288,188 @@
     </div>
     </div>
     </div> --}}
+
+
+
+
+
+    <section class="dark mt-5">
+        <div class="container py-4">
+            <h1 class="h1 text-center text-secondary" id="pageHeaderTitle">{{__('ui.nuoviProdottiPineapple')}}</h1>
+
+            <article class="postcard dark blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/pPhone_Orizontal.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title blue"><a href="#">pPhone 13</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 novembre 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.presentazionePPhone')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> Smartphone</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> pPhone</li>
+                        <li class="tag__item play blue">
+                            <a href="{{route('category.show', ['category'=>$categories[0]])}}"><i class="fas fa-play mr-2"></i> {{__('ui.goToUsedSection')}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard dark red">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/pBook_orizontal.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title red"><a href="#">pBook Ultra</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.presentazionePBook')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> Notebook</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> pBook</li>
+                        <li class="tag__item play red">
+                            <a href="{{route('category.show', ['category'=>$categories[1]])}}"><i class="fas fa-play mr-2"></i> {{__('ui.goToUsedSection')}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard dark green">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/pTab.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title green"><a href="#">pTab SlimXL</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.presentazionePTab')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> Tablet</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> pTab</li>
+                        <li class="tag__item play green">
+                            <a href="{{route('category.show', ['category'=>$categories[2]])}}"><i class="fas fa-play mr-2"></i> {{__('ui.goToUsedSection')}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard dark yellow">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/pWatch.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title yellow"><a href="#">pWatch Series 3</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.presentazionePWatch')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> SmartWatch</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i> pWatch</li>
+                        <li class="tag__item play yellow">
+                            <a href="{{route('category.show', ['category'=>$categories[3]])}}"><i class="fas fa-play mr-2"></i> {{__('ui.goToUsedSection')}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container py-2">
+            <div class="h1 text-center text-dark" id="pageHeaderTitle">{{__('ui.recensioni')}}</div>
+
+            <article class="postcard light blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/Linda.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue"><a href="#">Linda</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.recensioneLinda')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.recensioni')}}</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.tagUtenti')}}</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard light red">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/Pablo.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title red"><a href="#">Pablo</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.recensionePablo')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.recensioni')}}</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.tagUtenti')}}</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard light green">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/Arnold.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title green"><a href="#">Arnold</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.recensioneArnold')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.recensioni')}}</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.tagUtenti')}}</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="postcard light yellow">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="./../img/Guohua.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title yellow"><a href="#">Guohua</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2023-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25 maggio 2023
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{__('ui.recensioneGuohua')}}</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.recensioni')}}</li>
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>{{__('ui.tagUtenti')}}</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
 
 
 </x-layout>

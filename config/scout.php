@@ -123,7 +123,7 @@ return [
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansions' => 50,
-            'distance' => 6,
+            'distance' => 3,
         'no_limit' => true
         ],
         'asYouType' => false,
