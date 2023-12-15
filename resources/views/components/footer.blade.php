@@ -57,13 +57,13 @@
                     {{__('ui.products')}}
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Home</a>
+                        <a href="{{route('welcome')}}" class="text-reset">Home</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">{{__('ui.announcements')}}</a>
+                        <a href="{{route('product.index')}}" class="text-reset">{{__('ui.announcements')}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">{{__('ui.categories')}}</a>
+                        <a href="{{route('category.index')}}" class="text-reset">{{__('ui.categories')}}</a>
                     </p>
                 </div>
                 <!-- Grid column -->
