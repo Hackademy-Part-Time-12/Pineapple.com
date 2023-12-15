@@ -19,7 +19,7 @@
     <div class="containerForBanner">
         <div class="animazioneBanner">
             <div class="ctrlc">
-                <span class="ctrlv">{{__('ui.fraseInMovimento')}}</span>
+                <span class="ctrlv">{{__('ui.fraseInMovimentoPart1')}} <span class="text-success">{{__('ui.fraseInMovimentoPart2')}}</span></span>
                 <span class="testoBanner"></span>
             </div>
         </div>
