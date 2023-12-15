@@ -73,7 +73,7 @@
                 <div class="mb-3">
                     <label for="category">{{__('ui.category')}}</label>
                     <select wire:model.defer="category" name="category" id="category" class="form-control">
-                        <option value="">Scegli la categoria</option>
+                        <option value="">{{__('ui.scegliCategoria')}}</option>
                         @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach

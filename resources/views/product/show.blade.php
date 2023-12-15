@@ -40,14 +40,14 @@
 
                     <h5><span class="fw-bold">{{__('ui.categories')}}</span> {{$product->category->name}}</h4>
 
-                    <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product->user->name ?? 'Utente Sconosciuto'}}</small></p>
+                    <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product->user->name ?? __('ui.utenteSconosciuto') }}</small></p>
                     <p><small class="font-color-dark ">{{__('ui.publishedOn')}} {{$product->created_at->format('d/m/Y')}}</small></p>
                 </div>
             </div>
         </div>
         <div class="row p-5">
             <div class="col-12 text-center">
-                <a class="underline-none" href="{{route('product.index')}}"><button class="bn30 css-button-sliding-to-top--grey">Torna alla lista Annunci</button></a>
+                <a class="underline-none" href="{{route('product.index')}}"><button class="bn30 css-button-sliding-to-top--grey">{{__('ui.tornaListaAnnunci')}}</button></a>
             </div>
         </div>
     </div>

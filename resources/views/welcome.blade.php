@@ -98,7 +98,6 @@
 
 
 
-
     <div class="container mt-5">
         <div class="row">
             <h3 class="col-12 text-center">{{__('ui.allAnnouncements')}}</h3>
@@ -114,10 +113,10 @@
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
                         <span class="my_price">{{ $product->price }} €</span>
-                        <p class="my_byUser">{{__('ui.postedBy')}} {{$product->user->name ?? 'Utente Sconosciuto'}}</p>
+                        <p class="my_byUser">{{__('ui.postedBy')}} {{$product->user->name ?? __('ui.utenteSconosciuto') }}</p>
                         <p class="my_publishedIn">{{__('ui.publishedOn')}} {{$product->created_at->format('d/m/Y')}}</p>
                         <div class="my_card-back">
-                            <a class="mx-4" href="{{route('product.show', compact('product'))}}"><button class="bn30">Visualizza</button></a>
+                            <a class="mx-4" href="{{route('product.show', compact('product'))}}"><button class="bn30">{{__('ui.display')}}</button></a>
                             <a class="mx-4" href="{{route('category.show', ['category'=>$product->category])}}"><button class="bn30">{{$product->category->name}}</button></a>
                         </div>
                     </div>
@@ -140,10 +139,10 @@
     <div class="card-overlay container">
         <div class="row position-absolute top-0">
             <h2 class="card__title h1 fw-bold card-title text-white">{{ $product->title }}</h2>
-            <p>Inserito da: {{$product->user->name ?? 'Utente Sconosciuto'}}</p>
+            <p>Inserito da: {{$product->user->name ?? __('ui.utenteSconosciuto') }}</p>
             <p>Pubblicato il: {{$product->created_at->format('d/m/Y')}}</p>
             <div class="justify-content-between">
-                <a class="underline-none" href="{{route('product.show', compact('product'))}}"><button class="bn30 css-button-sliding-to-top--grey--dark">Visualizza Prodotto</button></a>
+                <a class="underline-none" href="{{route('product.show', compact('product'))}}"><button class="bn30 css-button-sliding-to-top--grey--dark">{{__('ui.visualizzaProdotto')}}</button></a>
                 <a class="underline-none" href="{{route('category.show', ['category'=>$product->category])}}"><button class="bn30 css-button-sliding-to-top--grey--dark">{{$product->category->name}}</button></a>
             </div>
         </div>

@@ -51,5 +51,10 @@ return [
 'IAcloseMessage'=>'close',
 'search'=>'Search',
 'fraseInMovimento'=>'As of November 24, buy a promotional product and you\'ll get a Pineapple Gift Card for up to €200.',
+'utenteSconosciuto'=>'Unknown User',
+'visualizzaProdotto'=>'View product',
+'tornaListaAnnunci'=>'Back to the list Ads',
+'scegliCategoria'=>'Select the category',
+
 
 ];

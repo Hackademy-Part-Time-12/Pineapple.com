@@ -67,7 +67,7 @@
 
                     <h5><span class="fw-bold">{{__('ui.categories')}}</span> {{$product_to_check->category->name}}</h4>
 
-                        <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product_to_check ->user->name ?? 'Utente Sconosciuto'}}</small></p>
+                        <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product_to_check ->user->name ?? __('ui.utenteSconosciuto') }}</small></p>
                         <p><small class="font-color-dark ">{{__('ui.publishedOn')}} {{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
                 </div>
             </div>

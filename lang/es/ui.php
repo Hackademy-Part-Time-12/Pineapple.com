@@ -49,6 +49,10 @@ return [
 'IAcloseMessage'=>'cerrar',
 'search'=>'Buscar',
 'fraseInMovimento'=>'A partir del 24 de noviembre, compra un producto en promoción y obtén una Pineapple Gift Card de hasta 200 €.',
+'utenteSconosciuto'=>'Usuario Desconocido',
+'visualizzaProdotto'=>'Ver producto',
+'tornaListaAnnunci'=>'Volver a la lista Anuncios',
+'scegliCategoria'=>'Elige la categoría',
 
 
 ];
