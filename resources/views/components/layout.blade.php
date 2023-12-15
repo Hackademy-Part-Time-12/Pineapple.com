@@ -16,11 +16,11 @@
 
     <x-navbar />
 
-    <div class="nonsieteingrado">
-        <div class="dicopiare">
+    <div class="containerForBanner">
+        <div class="animazioneBanner">
             <div class="ctrlc">
                 <span class="ctrlv">{{__('ui.fraseInMovimento')}}</span>
-                <span class="nonlosapetefare"></span>
+                <span class="testoBanner"></span>
             </div>
         </div>
     </div>

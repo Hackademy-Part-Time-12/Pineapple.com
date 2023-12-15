@@ -1,4 +1,4 @@
-.nonsieteingrado {
+.containerForBanner {
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -16,14 +16,14 @@
     font-family: 'VT323', monospace;
 }
 
-.dicopiare {
+.animazioneBanner {
     position: absolute;
     white-space: nowrap;
     will-change: transform;
-    animation: tastodestroispezionaelemento 25s linear infinite;
+    animation: animBanner 25s linear infinite;
 }
 
-.nonsieteingrado .ctrlc {
+.containerForBanner .ctrlc {
     color: #f4ce14;
     font-size: 13px;
     font-weight: 700;
@@ -31,18 +31,18 @@
     text-transform: uppercase;
 }
 
-.nonlosapetefare {
+.testoBanner {
     padding-left: 14px;
     padding-right: 14px;
     font-size: 9px;
 }
 
-.nonlosapetefare:after {
+.testoBanner:after {
     font-family: "icon";
     content: "";
 }
 
-@keyframes tastodestroispezionaelemento {
+@keyframes animBanner {
     from {
         transform: translateX(-200%);
     }
