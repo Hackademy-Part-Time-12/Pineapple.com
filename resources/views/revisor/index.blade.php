@@ -1,11 +1,9 @@
 <x-layout>
     <div class="container pt-5">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 pt-5 text-center">
-                <h1>
+                <h1 class="text-center">
                     {{$product_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
-            </div>
         </div>
     </div>
 
@@ -28,16 +26,10 @@
                     <div class="carousel-inner">
                         @foreach ($product_to_check->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
-                        </div>
-                        <div>
-                            @foreach ($image->labels as $label)
-                            {{$label}}
-                            @endforeach
+                            <img src="{{($image->getUrl(400,300))}}" class="img-fluid p-3 rounded" alt="...">
                         </div>
                         @endforeach
                     </div>
-                    @else
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -48,11 +40,18 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+                <h3>Tags</h3>
+                    <div>
+                            @foreach ($image->labels as $label)
+                            {{$label}}
+                            @endforeach
+                    </div>
+
             </div>
             @endif
             <div class="col-12 col-md-6">
             <div class="card-body">
-                <h5 class="tc-accent">revisione immagini</h5>
+                <h5 class="tc-accent">Revisione immagini</h5>
                     <p>Adulti: <span class="{{$image->adult}}"></span></p>
                     <p>Satira: <span class="{{$image->spoof}}"></span></p>
                     <p>Medicina: <span class="{{$image->medical}}"></span></p>

@@ -235,9 +235,10 @@
 
 
 
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
             <h2 class="col-12 text-center my-5">{{__('ui.allAnnouncements')}}</h2>
+            <div class="row">
 
             @foreach ($products as $product)
 
@@ -245,7 +246,28 @@
             $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
             @endphp
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-3">
+            <div class="new_card">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" class="card__image">
+                <div class="card__overlay">
+                    <div class="overlay__text">
+                    <h3>Mountain Trips</h3>
+                    <p>Plan your next adventure</p>
+                    <a href="#" class="button">View Trips</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            @endforeach
+            </div>
+
+
+        </div>
+    </div>
+
+                <!-- <div class="col-12 col-md-6">
                 <div class="my_card">
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
@@ -258,11 +280,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            @endforeach
+            </div> -->
 
-        </div>
-    </div>
 
 
 
