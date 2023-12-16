@@ -163,10 +163,10 @@
 
                 <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pPhone_Orizontal3.png')"></div>
                 <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pBookSurf_orizontal.png')"></div>
-                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pWatchCategory.jpg')"></div>
-                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pWatchCategory.jpg')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pTab2.png')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pWatch2.png')"></div>
                 <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pTVCategory.png')"></div>
-                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pAirCategory.jpg')"></div>
+                <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/pAir.png')"></div>
                 <div class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('./../img/accessoriCategory.jpg')"></div>
                 <div class="c-gradient-overlay"></div>
             </div>
