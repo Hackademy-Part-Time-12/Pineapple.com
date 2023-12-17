@@ -8,12 +8,12 @@
             @forelse ($products as $product)
 
             @php
-            $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : Storage::url($product->images()->first()->path);
+            $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
             @endphp
 
             @if($product->is_accepted === 1)
 
-            <div class="col-12 col-md-6">
+<!--             <div class="col-12 col-md-6">
                 <div class="my_card">
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
@@ -26,8 +26,24 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+
+            <div class="col-12 col-md-3">
+                <div class="new_card">
+                    <div class="card_product">
+                        <img src="{{$backgroundImage}}" class="card__image">
+                        <div class="card__overlay">
+                            <div class="overlay__text">
+                                <h3>{{ $product->title }}</h3>
+                                <p>{{Str::limit($product->description), 200}}</p>
+                                <a href="{{route('product.show', $product)}}" class="button">Visualizza Annuncio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             @endif
             @empty
 
