@@ -72,4 +72,11 @@ return [
 'somethingWentwrong'=>'Oops! Something went wrong. Please try again.',
 'thinking'=>'Thinking...',
 'incoming'=>'incoming',
+'revisioneImmagini'=>'Image Review',
+'adulti'=>'Adults',
+'satira'=>'Satire',
+'medicina'=>'Medicine',
+'violenza'=>'Violence',
+'ammiccante'=>'Suggestive Content',
+
 ];

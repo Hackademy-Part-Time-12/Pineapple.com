@@ -1,18 +1,13 @@
 <x-layout>
     <div class="container pt-5">
         <div class="row">
-                <h1 class="text-center">
-                    {{$product_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
-                </h1>
+            <h1 class="text-center">
+                {{$product_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+            </h1>
         </div>
     </div>
 
     @if ($product_to_check)
-    <div class="container my-5">
-        <div class="row">
-            <h2 class="font-color-dark font-titoli">{{$product_to_check->title}}</h2>
-        </div>
-    </div>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
@@ -40,57 +35,146 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <h3>Tags</h3>
-                    <div>
-                            @foreach ($image->labels as $label)
-                            {{$label}}
-                            @endforeach
+
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button tc-accent h1 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                {{__('ui.revisioneImmagini')}}
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><span class="{{$image->adult}}"></span></th>
+                                            <td>{{__('ui.adulti')}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="{{$image->spoof}}"></span></th>
+                                            <td>{{__('ui.satira')}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="{{$image->medical}}"></span></th>
+                                            <td colspan="2">{{__('ui.medicina')}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row"><span class="{{$image->violence}}"></span></th>
+                                            <td colspan="2">{{__('ui.violenza')}}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row"><span class="{{$image->racy}}"></span></th>
+                                            <td colspan="2">{{__('ui.ammiccante')}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <span><strong> Tags : </strong></span>
+
+                    @foreach ($image->labels as $label)
+                    {{$label}}
+                    @endforeach
+                </div>
+
+                @endif
+
+            </div>
+
+
+
+
+
+            <div class="col-12 col-md-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="h3" scope="col">{{$product_to_check->title}}</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">{{__('ui.price')}}</th>
+                                <td>{{$product_to_check ->price}}€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">{{__('ui.categories')}}</th>
+                                <td colspan="2">{{$product_to_check->category->name}}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">{{__('ui.postedBy')}}</th>
+                                <td colspan="2">{{$product_to_check ->user->name ?? __('ui.utenteSconosciuto') }}</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">{{__('ui.publishedOn')}}</th>
+                                <td colspan="2">{{$product_to_check ->created_at->format('d/m/Y')}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="accordion" id="accordionExample2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button tc-accent h1 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                {{__('ui.description')}}
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
+                            <div class="accordion">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>{!! nl2br($product_to_check ->description) !!}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <form action="{{route('revisor.accept_product', ['product'=>$product_to_check])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-success shadow">Accetta</button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-6 text-end">
+                            <form action="{{route('revisor.reject_product', ['product'=>$product_to_check])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            </form>
+
+                        </div>
                     </div>
 
-            </div>
-            @endif
-            <div class="col-12 col-md-6">
-            <div class="card-body">
-                <h5 class="tc-accent">Revisione immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
-            </div>
-            </div>
-            <div class="col-12">
-                <div class="col-12 font-color-dark ">
-                    <p><span class="fw-bold">{{__('ui.description')}}</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>
-                    <h5><span class="fw-bold">{{__('ui.price')}}</span> {{$product_to_check ->price}}€</h5>
 
-                    <h5><span class="fw-bold">{{__('ui.categories')}}</span> {{$product_to_check->category->name}}</h4>
 
-                        <p><small class="font-color-dark ">{{__('ui.postedBy')}} {{$product_to_check ->user->name ?? __('ui.utenteSconosciuto') }}</small></p>
-                        <p><small class="font-color-dark ">{{__('ui.publishedOn')}} {{$product_to_check ->created_at->format('d/m/Y')}}</small></p>
-                </div>
             </div>
+
+
+
+
         </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form action="{{route('revisor.accept_product', ['product'=>$product_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow">Accetta</button>
-                </form>
-            </div>
-            <div class="col-12 col-md-6 text-end">
-                <form action="{{route('revisor.reject_product', ['product'=>$product_to_check])}}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                </form>
 
-            </div>
-        </div>
-    </div>
-
-    @endif
+        @endif
 
 
 </x-layout>

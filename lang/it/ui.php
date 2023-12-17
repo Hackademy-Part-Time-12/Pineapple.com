@@ -70,4 +70,11 @@ return [
 'somethingWentwrong'=>'Ops! Qualcosa è andato storto. Per favore, riprova.',
 'thinking'=>'Sto pensando...',
 'incoming'=>'Un&nbsp;attimo',
+'revisioneImmagini'=>'Revisione immagini',
+'adulti'=>'Adulti',
+'satira'=>'Satira',
+'medicina'=>'Medicina',
+'violenza'=>'Violenza',
+'ammiccante'=>'Contenuto Ammiccante',
+
 ];
