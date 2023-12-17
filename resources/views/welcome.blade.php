@@ -337,31 +337,21 @@
                 $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : $product->images()->first()->getUrl(400,300);
                 @endphp
 
-                <div class="col-12 col-md-3">
-                    <div class="new_card">
-                        <div class="card_product">
-                            <img src="{{$backgroundImage}}" class="card__image">
-                            <div class="card__overlay">
-                                <div class="overlay__text">
-                                    <h3>{{ $product->title }}</h3>
-                                    <p>{{Str::limit($product->description), 200}}</p>
-                                    <a href="{{route('product.show', $product)}}" class="button">Visualizza Annuncio</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card m-2 p-0 shadow" style="width: 18rem;">
+                    <img src="{{$backgroundImage}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->title }}</h5>
+                        <p class="card-text">{{Str::limit($product->description), 200}}</p>
+                        <a href="{{route('product.show', $product)}}" class="btn btn-primary">{{__('ui.visualizzaProdotto')}}</a>
                     </div>
                 </div>
+
                 @endforeach
             </div>
 
 
         </div>
     </div>
-
-
-
-
-
 
 
 

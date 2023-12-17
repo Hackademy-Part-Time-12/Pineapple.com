@@ -13,7 +13,7 @@
 
             @if($product->is_accepted === 1)
 
-<!--             <div class="col-12 col-md-6">
+            <!--             <div class="col-12 col-md-6">
                 <div class="my_card">
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
                         <h1>{{ $product->title }}</h1>
@@ -29,7 +29,7 @@
             </div> -->
 
 
-            <div class="col-12 col-md-3">
+<!--             <div class="col-12 col-md-3">
                 <div class="new_card">
                     <div class="card_product">
                         <img src="{{$backgroundImage}}" class="card__image">
@@ -42,7 +42,21 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+
+
+
+            <div class="card m-2 p-0 shadow" style="width: 18rem;">
+                <img src="{{$backgroundImage}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $product->title }}</h5>
+                    <p class="card-text">{{Str::limit($product->description), 200}}</p>
+                    <a href="{{route('product.show', $product)}}" class="btn btn-primary">{{__('ui.visualizzaProdotto')}}</a>
+                </div>
             </div>
+
+
 
             @endif
             @empty
