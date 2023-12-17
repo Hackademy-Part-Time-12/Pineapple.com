@@ -113,7 +113,7 @@
 
 
 
-        <div class="container row mt-5">
+<!--         <div class="container row mt-5">
             <div class="col-12 col-md-6">
                 <h3>Circuiti di pagamento :</h3>
             </div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-
+ -->
 
         <div class="row p-5">
             <div class="col-12 text-center">
