@@ -40,15 +40,21 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <h3>Tags</h3>
-                    <div>
-                            @foreach ($image->labels as $label)
-                            {{$label}}
-                            @endforeach
-                    </div>
-
+                </div>
             </div>
             @endif
+            <h3>Tags</h3>
+                    <div>
+                    @if ($image !== null && is_array($image->labels))
+                        @foreach ($image->labels as $label)
+                            {{$label}}
+                        @endforeach
+                    @else
+                    <div>
+                        <h4>Nessun Tag da mostrare</h4>
+                    </div>                   
+                    @endif                    
+
             <div class="col-12 col-md-6">
             <div class="card-body">
                 <h5 class="tc-accent">Revisione immagini</h5>

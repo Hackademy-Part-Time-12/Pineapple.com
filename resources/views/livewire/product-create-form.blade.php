@@ -48,7 +48,8 @@
                             <div class="row border border-4 border-info rounded shadow py-4">
                                 @foreach ($images as $key => $image)
                                 <div class="col my-3">
-                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});    background-size: cover;
+"></div>
                                     <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                                 </div>
                                 @endforeach

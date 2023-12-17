@@ -91,18 +91,17 @@ class ProductCreateForm extends Component
                 $newFileName = "products/".$this->product->id;
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-           RemoveFaces::withChain([
+          /* RemoveFaces::withChain([
                 new ResizeImage($newImage->path , 400 , 300),
                 new GoogleVisionSafeSearch($newImage->id),
                 new GoogleVisionLabelImage($newImage->id),
                 new watermark($newImage->id),
             ])->dispatch($newImage->id);
+             */
             
 
-                /*
                 dispatch ( new ResizeImage($newImage->path , 400 , 300));
                 dispatch (new watermark($newImage->id));  
-                */
             
             }
 
