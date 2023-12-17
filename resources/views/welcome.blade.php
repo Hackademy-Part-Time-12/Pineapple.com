@@ -57,39 +57,96 @@
 
 
 
-                <div id="carouselExample" class="carousel slide mobile">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="{{ asset('img/pPhone_Vertical1.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="{{ asset('img/pBookSurf_orizontal.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                <img src="{{ asset('img/pTab2.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                <img src="{{ asset('img/pWatch2.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                <img src="{{ asset('img/pTVCategory.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                <img src="{{ asset('img/pAir.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item active">
-                <img src="{{ asset('img/accessoriCategory.jpg') }}" class="d-block w-100" alt="...">
+
+
+    <div id="carouselExampleCaptions" class="carousel slide mobile">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('img/pPhone_Vertical4.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[0]])}}">
+                        <h5>pPhone</h5>
+                    </a>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <img src="{{ asset('img/pBookVertical.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[1]])}}">
+                        <h5>pBook</h5>
+                    </a>
+                </div>
             </div>
+            <div class="carousel-item">
+                <img src="{{ asset('img/pTabVertical.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[2]])}}">
+                        <h5>pTab</h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/pWatchVertical2.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[3]])}}">
+                        <h5>pWatch</h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/pTVVertical.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[4]])}}">
+                        <h5>pTV</h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/pAirVertical.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[5]])}}">
+                        <h5>pAir</h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/accessoriCategoryVertical.png') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block text-dark">
+                    <a href="{{route('category.show', ['category'=>$categories[6]])}}">
+                        <h5>Accessori</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+
+
 
 
     <div class="container-fluid pc">
