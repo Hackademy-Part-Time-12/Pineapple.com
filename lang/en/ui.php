@@ -68,4 +68,8 @@ return [
 'recensioneArnold'=>'I recently purchased the pTab SlimXL, and I am completely satisfied. The ultra-slim and lightweight design makes it incredibly convenient to carry anywhere, without compromising the 12-inch screen size. The resolution is fantastic, offering clear and vivid images for both work and entertainment. The performance of the octa-core processor is impressive, handling all the applications I use without any slowdown. Battery life is another strong point, allowing me to use it for entire days without recharging.',
 'recensioneGuohua'=>'Since I purchased the pWatch Series 3, my daily routine has improved significantly. The sleek design and durable case make it suitable for every occasion, whether at the gym or in the office. I\'ve been particularly impressed by the health and fitness monitoring features, which help me track my progress and stay motivated. The battery lasts a full day, even with intensive use, and smart notifications keep me connected without having to pull out my phone. It\'s a functional and stylish smartwatch, perfect for my active lifestyle.',
 'tagUtenti'=>'User',
+'IASystemMessage'=>'You are a virtual assistant on a website named Pineapple that sells technological items. The Pineapple website and brand were created by Francesco Barretta, Valentina Petrilli, Federico Mantovani, Nicolò Ayroldi, and Fabrizio Mattone. If the user wants information about the site, you will provide it and also assist them in finding the categories and pages they are interested in.',
+'somethingWentwrong'=>'Oops! Something went wrong. Please try again.',
+'thinking'=>'Thinking...',
+'incoming'=>'incoming',
 ];

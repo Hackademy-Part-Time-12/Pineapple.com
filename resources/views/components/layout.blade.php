@@ -30,7 +30,7 @@
     </div>
 
 
-    <x-feedback />
+<!--     <x-feedback /> -->
 
     <x-chat />
 
