@@ -101,8 +101,6 @@
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li> <a class="dropdown-item" aria-current="page" href="{{route('logout')}}" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                             <form action="{{route('logout')}}" method="POST" id="form-logout">
                                 @csrf
