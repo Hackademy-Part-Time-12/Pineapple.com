@@ -128,22 +128,21 @@ a {
     will-change: transform;
 }
 
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
 
 
 
-/* Media Query per dispositivi di larghezza massima di 768px (ad esempio, dispositivi mobili) */
 @media (max-width: 768px) {
-
-    
-    .c-mouse-vertical-carousel__list-item a {
-        padding-left: 0; /* Rimuovi il padding sinistro */
+    .pc {
+        display: none;
     }
-    
-    .c-mouse-vertical-carousel__eyebrow span {
-        left: 0; /* Rimuovi lo spostamento a sinistra */
-    }
-    
-    .c-mouse-vertical-carousel__title {
-        max-width: 100%; /* Fai sì che il titolo occupi l'intera larghezza */
+    .mobile {
+        display: block;
     }
 }

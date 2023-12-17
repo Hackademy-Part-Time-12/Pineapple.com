@@ -21,7 +21,6 @@ return new class extends Migration
 
         $categories = [
             ['name' => 'pBook', 'cover' => '/storage/default/pBookCategory.jpg'],
-            ['name' => 'pBookPro', 'cover' => '/storage/default/pBookProCategory.jpg'],
             ['name' => 'pTab', 'cover' => '/storage/default/pTabCategory.jpg'],
             ['name' => 'pPhone', 'cover' => '/storage/default/pPhoneCategory.jpg'],
             ['name' => 'pWatch', 'cover' => '/storage/default/pWatchCategory.jpg'],

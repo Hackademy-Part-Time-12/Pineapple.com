@@ -11,6 +11,8 @@
             $backgroundImage = $product->images()->get()->isEmpty() ? 'https://picsum.photos/200' : Storage::url($product->images()->first()->path);
             @endphp
 
+            @if($product->is_accepted === 1)
+
             <div class="col-12 col-md-6">
                 <div class="my_card">
                     <div class="my_cover" style="background-image: url('{{ $backgroundImage }}');">
@@ -25,6 +27,8 @@
                     </div>
                 </div>
             </div>
+            
+            @endif
             @empty
 
             <div class="col-12">

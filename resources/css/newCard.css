@@ -6,14 +6,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /*height: 100vh;*/
     padding: 0;
-    margin: 0;
-    perspective: 500px;
+    margin: 10px 0px 10px 25px;
+    /*perspective: 500px;*/
     /*background: radial-gradient(white,lightgray);*/
   }
   
-  .card {
+  .card_product {
     position: relative;
     transition: all .5s ease-in;
   }
@@ -39,7 +39,7 @@
     background-color: #393839;
   }
   
-  .card:hover .card__overlay {
+  .card_product:hover .card__overlay {
     opacity: 1;
   }
   

@@ -57,8 +57,42 @@
 
 
 
+                <div id="carouselExample" class="carousel slide mobile">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{{ asset('img/pPhone_Vertical1.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/pBookSurf_orizontal.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{{ asset('img/pTab2.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active">
+                <img src="{{ asset('img/pWatch2.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active">
+                <img src="{{ asset('img/pTVCategory.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active">
+                <img src="{{ asset('img/pAir.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item active">
+                <img src="{{ asset('img/accessoriCategory.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
 
-    <div class="container-fluid">
+
+    <div class="container-fluid pc">
         <header class="c-header c-header--archive c-header--project-list">
             <div class="c-mouse-vertical-carousel js-carousel u-media-wrapper u-media-wrapper--16-9">
                 <ul class="c-mouse-vertical-carousel__list js-carousel-list">
@@ -248,13 +282,13 @@
 
                 <div class="col-12 col-md-3">
                     <div class="new_card">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ" class="card__image">
+                        <div class="card_product">
+                            <img src="{{$backgroundImage}}" class="card__image">
                             <div class="card__overlay">
                                 <div class="overlay__text">
-                                    <h3>Mountain Trips</h3>
-                                    <p>Plan your next adventure</p>
-                                    <a href="#" class="button">View Trips</a>
+                                    <h3>{{ $product->title }}</h3>
+                                    <p>{{Str::limit($product->description), 200}}</p>
+                                    <a href="{{route('product.show', $product)}}" class="button">Visualizza Annuncio</a>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +310,7 @@
 
 
 
-    <section class="dark mt-5">
+    <section class="dark" style="margin-top: 100px;">
         <div class="container py-4">
             <h1 class="h1 text-center text-secondary" id="pageHeaderTitle">{{__('ui.nuoviProdottiPineapple')}}</h1>
 
