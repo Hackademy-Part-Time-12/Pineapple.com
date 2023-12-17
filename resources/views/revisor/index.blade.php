@@ -21,7 +21,9 @@
                     <div class="carousel-inner">
                         @foreach ($product_to_check->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
+                        <div class="d-flex align-items-center justify-content-center">
                             <img src="{{($image->getUrl(400,300))}}" class="img-fluid p-3 rounded" alt="...">
+                            </div>
                         </div>
                         @endforeach
                     </div>
@@ -35,37 +37,6 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-<<<<<<< HEAD
-                </div>
-            </div>
-            @endif
-            <h3>Tags</h3>
-                    <div>
-                    @if ($image !== null && is_array($image->labels))
-                        @foreach ($image->labels as $label)
-                            {{$label}}
-                        @endforeach
-                    @else
-                    <div>
-                        <h4>Nessun Tag da mostrare</h4>
-                    </div>                   
-                    @endif                    
-
-            <div class="col-12 col-md-6">
-            <div class="card-body">
-                <h5 class="tc-accent">Revisione immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
-            </div>
-            </div>
-            <div class="col-12">
-                <div class="col-12 font-color-dark ">
-                    <p><span class="fw-bold">{{__('ui.description')}}</span> <br><br> {!! nl2br($product_to_check ->description) !!}</p>
-                    <h5><span class="fw-bold">{{__('ui.price')}}</span> {{$product_to_check ->price}}€</h5>
-=======
 
 
                 <div class="accordion" id="accordionExample">
@@ -111,9 +82,13 @@
                 <div class="mt-5">
                     <span><strong> Tags : </strong></span>
 
-                    @foreach ($image->labels as $label)
-                    {{$label}}
-                    @endforeach
+                    @if ($image !== null && is_array($image->labels))
+                        @foreach ($image->labels as $label)
+                            {{$label}}
+                        @endforeach
+                    @else
+                        <h4>Nessun Tag da Mostrare</h4>
+                    @endif
                 </div>
 
                 @endif
@@ -196,7 +171,6 @@
                         </div>
                     </div>
 
->>>>>>> 16383ff821c782972fbe0738b0981e4f15418893
 
 
             </div>
