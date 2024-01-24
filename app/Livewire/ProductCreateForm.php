@@ -87,17 +87,17 @@ class ProductCreateForm extends Component
 
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                //$this->product->images()->create(['path' => $image->store('images', 'public')]);
+                $this->product->images()->create(['path' => $image->store('images', 'public')]);      // Commenta questa riga se vuoi utilizzare l'API Google
                 $newFileName = "products/".$this->product->id;
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-          /* RemoveFaces::withChain([
-                new ResizeImage($newImage->path , 400 , 300),
-                new GoogleVisionSafeSearch($newImage->id),
-                new GoogleVisionLabelImage($newImage->id),
-                new watermark($newImage->id),
-            ])->dispatch($newImage->id);
-             */
+            RemoveFaces::withChain([                                        //
+                new ResizeImage($newImage->path , 400 , 300),               //
+                new GoogleVisionSafeSearch($newImage->id),                  //
+                new GoogleVisionLabelImage($newImage->id),                  // Commenta queste righe se vuoi utilizzare l'API Google
+                new watermark($newImage->id),                               //
+            ])->dispatch($newImage->id);                                    //
+                                                                            //
             
 
                 dispatch ( new ResizeImage($newImage->path , 400 , 300));
